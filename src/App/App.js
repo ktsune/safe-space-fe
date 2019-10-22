@@ -8,7 +8,8 @@ class App extends Component {
     super();
     this.state = {
       reliefCenters: [],
-      isLoading: true
+      reliefCenterID: "",
+      isLoading: false
     }
   }
 
@@ -18,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <section className="App">
-        {this.state.isLoading ? <SplashPage /> : <LogInForm />}
+        {this.state.isLoading ? <SplashPage /> : <LogInForm reliefCenters={this.state.reliefCenters}/>}
       </section>
     )
   }
