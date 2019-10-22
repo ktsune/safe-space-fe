@@ -1,8 +1,9 @@
 # Production & Codebase
 
-[Front end GitHub](https://github.com/CervAnn/cross-poll-fe)
 
-[Back end GitHub](https://github.com/Jake0Miller/lance-be)
+[Front end GitHub](https://github.com/ktsune/safe-space-fe)
+
+[Back end GitHub](https://github.com/Jake0Miller/safe-space-be)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
