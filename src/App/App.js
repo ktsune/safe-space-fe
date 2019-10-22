@@ -12,9 +12,14 @@ class App extends Component {
       isLoading: false
     }
   }
-
+  
   //add componentDidMount to fetch relief center data
   // once fetched, set isLoading to false
+
+  componentDidMount = () => {
+
+  }
+
 
   render() {
     return (

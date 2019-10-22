@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Map from '../Map/Map'
 import './LogInForm.css'
 
 class LogInForm extends Component {
@@ -16,6 +17,7 @@ class LogInForm extends Component {
       <section className="LogInForm">
         {!this.state.isLoggedIn ?
         <article className="pick-relief-center-menu">
+          <Map />
           <input id="dropdown-menu" placeholder="Find Relief Center..."/>
           <button id="loginForm-submit-button">Submit</button>
         </article>
