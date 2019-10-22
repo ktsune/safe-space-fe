@@ -12,12 +12,16 @@ class LogInForm extends Component {
   //Add map function to apply relief centers to dropdown menu
   //Add function to set reliefCenterID state when clicked and toggle isLoggedIn to true
 
+  selectPin = () => {
+    console.log('test')
+  }
+
   render() {
     return (
       <section className="LogInForm">
         {!this.state.isLoggedIn ?
         <article className="pick-relief-center-menu">
-          <Map />
+          <Map selectPin={this.selectPin}/>
           <input id="dropdown-menu" placeholder="Find Relief Center..."/>
           <button id="loginForm-submit-button">Submit</button>
         </article>
