@@ -1,0 +1,17 @@
+.SplashPage {
+  margin: 0;
+  height: 100vh;
+  background-color: #6C782A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#load-img-lotus {
+  height: 300px;
+}
+
+#loading-text {
+  color: #FFF;
+  font-size: 50px;
+}
