@@ -1,0 +1,47 @@
+.LogInForm {
+  height: 100vh;
+  background-color: #9EA041;
+  display: flex;
+  justify-content: center;
+}
+
+.pick-relief-center-menu {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  justify-content: center;
+}
+
+#dropdown-menu {
+  height: 50px;
+  border-radius: 15px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#loginForm-submit-button {
+  height: 40px;
+  width: 50%;
+  align-self: center;
+  border-radius: 5px;
+  background-color: #D5CF91;
+  font-size: 25px;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#supplies-button, #check-in-button, 
+#check-out-button {
+  height: 75px;
+  width: 25%;
+  border-radius: 15px;
+  background-color: #D5CF91;
+  font-size: 25px;
+}
