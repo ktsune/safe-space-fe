@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import GoogleMapReact from 'google-map-react';
 import Pin from '../Pin/Pin';
+import './Map.css';
 
 const GET_CENTERS = gql`
   query {
@@ -13,6 +14,7 @@ const GET_CENTERS = gql`
       phone
       website
       email
+      id
     }
   }
 `;
@@ -20,7 +22,7 @@ const GET_CENTERS = gql`
 const Map = ({ selectPin }) => {
   const [lat, updateLat] = useState(39.7392);
   const [lng, updateLng] = useState(-104.9903);
-  const [zoom, updateZoom] = useState(11);
+  const [zoom, updateZoom] = useState(12);
 
   const { loading, error, data } = useQuery(GET_CENTERS);
       
@@ -29,12 +31,12 @@ const Map = ({ selectPin }) => {
   if (data) {
     var centersList = data.centers.map(center => {
       return <Pin lat={center.lat} lng={center.lng} text="My Marker" selectPin={selectPin} key={center.lat}/>
-    })
+    });
   }
 
   console.log(data)
   return(
-    <div style={{ height: '50vh', width: '100%'}}>
+    <div className="Map_container">
       <GoogleMapReact 
         bootstrapURLKeys={{key: 'AIzaSyALUB8zfqw0qQveLHNvUcrwPpjarP4laIE'}}
         defaultCenter={{
