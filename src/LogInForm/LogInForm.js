@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import './LogInForm.css'
+import CheckInForm from '../CheckInForm/CheckInForm';
 
 class LogInForm extends Component {
   constructor() {
     super();
     this.state = {
-      isLoggedIn: false
+      isLoggedIn: true, 
+      hasBeenClicked: true
     }
   }
   //Add map function to apply relief centers to dropdown menu
   //Add function to set reliefCenterID state when clicked and toggle isLoggedIn to true
+
+  toggleForm = () => {
+    this.setState({ hasBeenClicked: !this.state.hasBeenClicked })
+  }
 
   render() {
     return (
@@ -22,9 +28,14 @@ class LogInForm extends Component {
         :
         <article className="navigation-menu">
           <button id="supplies-button">Supplies</button>
-          <button id="check-in-button">Check In</button>
+          <button id="check-in-button" onClick={this.toggleForm} >Check In</button>
           <button id="check-out-button">Check Out</button>
         </article>
+        }
+        {
+          this.state.hasBeenClicked 
+          && 
+          <CheckInForm /> 
         }
       </section>
     )
