@@ -1,12 +1,15 @@
 import React from 'react';
+import Map from '../Map/Map'
 import  { NavLink } from 'react-router-dom';
 import './LogInForm.css'
 
-const LogInForm = ({reliefCenterID, reliefCenter}) => {
+const LogInForm = ({ reliefCenterID, reliefCenter, selectPin}) => {
+
   return (
     <section className="LogInForm">
     {!reliefCenterID ? 
       <article className="pick-relief-center-menu">
+        <Map selectPin={selectPin}/>
         <input id="dropdown-menu" placeholder="Find Relief Center..."/>
         <button id="loginForm-submit-button">Submit</button>
       </article> 
