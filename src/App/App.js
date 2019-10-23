@@ -13,7 +13,7 @@ class App extends Component {
     super();
     this.state = {
       reliefCenters: [],
-      reliefCenterID: "",
+      reliefCenterID: "4",
       isLoading: false
     }
   }
@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <section className="App">
-          {this.state.isLoading ? <SplashPage /> : <LogInForm reliefCenters={this.state.reliefCenters}/>}
+          {this.state.isLoading ? <SplashPage /> : <LogInForm reliefCenterID={this.state.reliefCenterID} reliefCenters={this.state.reliefCenters}/>}
         </section>
       </ApolloProvider>
     )

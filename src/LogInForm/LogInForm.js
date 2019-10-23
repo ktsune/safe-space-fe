@@ -1,16 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Map from '../Map/Map'
 import './LogInForm.css'
 
-class LogInForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isLoggedIn: false
-    }
-  }
-  //Add map function to apply relief centers to dropdown menu
-  //Add function to set reliefCenterID state when clicked and toggle isLoggedIn to true
+const LogInForm = ({reliefCenterID, reliefCenter}) => {
 
   selectPin = () => {
     console.log('test')
@@ -37,5 +29,6 @@ class LogInForm extends Component {
   }
 }
 
-export default LogInForm;
+export default LogInForm
+
 
