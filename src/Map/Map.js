@@ -8,6 +8,7 @@ import './Map.css';
 const GET_CENTERS = gql`
   query {
     centers {
+      name
       addressPrint
       lat
       lng

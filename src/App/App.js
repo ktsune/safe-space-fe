@@ -14,15 +14,10 @@ const client = new ApolloClient({
 
 const App = () => {
   const [reliefCenter, setreliefCenter] = useState('');
+  const [isCenterSelected, selectCenter] = useState(false)
   const [isLoading, setIsLoading] = useState(false);
 
   const currentReliefCenter = useMemo(() => ({ reliefCenter, setreliefCenter }), [reliefCenter, setreliefCenter]);
-
-    
-  
-  // selectPin = (id) => {
-    //   console.log(id)
-    // }
     
     //add componentDidMount to fetch relief center data
     // once fetched, set isLoading to false
@@ -36,6 +31,8 @@ const App = () => {
               <SplashPage />
               ) : (
                 <LogInForm
+                selectCenter={selectCenter}
+                isCenterSelected={isCenterSelected}
                 reliefCenter={reliefCenter}
                 />
                 )}
