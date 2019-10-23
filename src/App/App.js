@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useMemo } from 'react'
 import './App.css'
 import SplashPage from '../SplashPage/SplashPage'
 import LogInForm from '../LogInForm/LogInForm'
@@ -7,49 +7,43 @@ import CheckOutForm from "../CheckOutForm/CheckOutForm";
 import { Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { CurrentCenterContext } from '../CurrentCenterContext';
 const client = new ApolloClient({
   uri: 'https://safe-space-be.herokuapp.com/graphql',
 });
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      reliefCenters: [],
-      reliefCenterID: "4",
-      isLoading: false
-    };
-  }
+const App = () => {
+  const [reliefCenter, setreliefCenter] = useState('');
+  const [isCenterSelected, selectCenter] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
-  selectPin = () => {
-    console.log('test')
-  }
-
-  //add componentDidMount to fetch relief center data
-  // once fetched, set isLoading to false
-
-  render() {
+  const currentReliefCenter = useMemo(() => ({ reliefCenter, setreliefCenter }), [reliefCenter, setreliefCenter]);
+    
+    //add componentDidMount to fetch relief center data
+    // once fetched, set isLoading to false
+    
     return (
       <ApolloProvider client={client}>
-        <section className="App">
+      <section className="App">
+        <CurrentCenterContext.Provider value={currentReliefCenter}>
           <Route exact path="/">
-            {this.state.isLoading ? (
+            {isLoading ? (
               <SplashPage />
-            ) : (
-              <LogInForm
-                reliefCenterID={this.state.reliefCenterID}
-                reliefCenters={this.state.reliefCenters}
-                selectPin={this.selectPin}
-              />
-            )}
+              ) : (
+                <LogInForm
+                selectCenter={selectCenter}
+                isCenterSelected={isCenterSelected}
+                reliefCenter={reliefCenter}
+                />
+                )}
           </Route>
           {/* <Route exact path='/supplies' render={() => < /> */}
           <Route exact path="/check-in" component={CheckInForm} />
           <Route exact path="/check-out" component={CheckOutForm} />
-        </section>
-      </ApolloProvider>
-    );
-  }
+        </CurrentCenterContext.Provider>
+      </section>
+    </ApolloProvider>
+  );
 }
 
 export default App;

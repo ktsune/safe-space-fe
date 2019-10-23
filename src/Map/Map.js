@@ -8,6 +8,7 @@ import './Map.css';
 const GET_CENTERS = gql`
   query {
     centers {
+      name
       addressPrint
       lat
       lng
@@ -19,7 +20,7 @@ const GET_CENTERS = gql`
   }
 `;
 
-const Map = ({ selectPin }) => {
+const Map = () => {
   const [lat, updateLat] = useState(39.7392);
   const [lng, updateLng] = useState(-104.9903);
   const [zoom, updateZoom] = useState(12);
@@ -29,12 +30,11 @@ const Map = ({ selectPin }) => {
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
   if (data) {
-    var centersList = data.centers.map(center => {
-      return <Pin lat={center.lat} lng={center.lng} text="My Marker" selectPin={selectPin} key={center.lat}/>
+    var centersList = data.centers.map((center, index) => {
+      return <Pin center={center} lat={center.lat} lng={center.lng} text="My Marker" key={index}/>
     });
-  }
+  } 
 
-  console.log(data)
   return(
     <div className="Map_container">
       <GoogleMapReact 
