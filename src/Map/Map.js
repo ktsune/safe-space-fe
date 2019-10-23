@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import GoogleMapReact from 'google-map-react';
@@ -7,8 +7,9 @@ import Pin from '../Pin/Pin';
 const GET_CENTERS = gql`
   query {
     centers {
-      id
       address
+      lat
+      lng
     }
   }
 `;
@@ -19,11 +20,11 @@ const Map = ({ selectPin }) => {
   const [zoom, updateZoom] = useState(9);
 
   const { loading, error, data } = useQuery(GET_CENTERS);
-  
+      
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
-  console.log(data)
 
+  console.log(data)
   return(
     <div style={{ height: '50vh', width: '100%'}}>
       <GoogleMapReact 

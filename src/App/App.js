@@ -5,7 +5,7 @@ import LogInForm from '../LogInForm/LogInForm'
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 const client = new ApolloClient({
-  uri: 'https://safe-space-be.herokuapp.com/',
+  uri: 'https://safe-space-be.herokuapp.com/graphql',
 });
 
 class App extends Component {
