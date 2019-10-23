@@ -7,9 +7,12 @@ import Pin from '../Pin/Pin';
 const GET_CENTERS = gql`
   query {
     centers {
-      address
+      addressPrint
       lat
       lng
+      phone
+      website
+      email
     }
   }
 `;
@@ -17,12 +20,17 @@ const GET_CENTERS = gql`
 const Map = ({ selectPin }) => {
   const [lat, updateLat] = useState(39.7392);
   const [lng, updateLng] = useState(-104.9903);
-  const [zoom, updateZoom] = useState(9);
+  const [zoom, updateZoom] = useState(11);
 
   const { loading, error, data } = useQuery(GET_CENTERS);
       
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
+  if (data) {
+    var centersList = data.centers.map(center => {
+      return <Pin lat={center.lat} lng={center.lng} text="My Marker" selectPin={selectPin} key={center.lat}/>
+    })
+  }
 
   console.log(data)
   return(
@@ -35,12 +43,7 @@ const Map = ({ selectPin }) => {
         }}
         defaultZoom={zoom}
       >
-      <Pin
-        lat={39.7392}
-        lng={-104.9903}
-        text="My Marker"
-        selectPin={selectPin}
-      /> 
+        { centersList }
       </GoogleMapReact>
     </div>
   )
