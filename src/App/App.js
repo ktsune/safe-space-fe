@@ -4,6 +4,7 @@ import SplashPage from '../SplashPage/SplashPage'
 import LogInForm from '../LogInForm/LogInForm'
 import CheckInForm from "../CheckInForm/CheckInForm";
 import CheckOutForm from "../CheckOutForm/CheckOutForm";
+import SuppliesForm from "../SuppliesForm/SuppliesForm";
 import { Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -28,16 +29,16 @@ const App = () => {
         <CurrentCenterContext.Provider value={currentReliefCenter}>
           <Route exact path="/">
             {isLoading ? (
-              <SplashPage />
-              ) : (
-                <LogInForm
-                selectCenter={selectCenter}
-                isCenterSelected={isCenterSelected}
-                reliefCenter={reliefCenter}
-                />
-                )}
+            <SplashPage />
+            ) : (
+            <LogInForm
+            selectCenter={selectCenter}
+            isCenterSelected={isCenterSelected}
+            reliefCenter={reliefCenter}
+            />
+            )}
           </Route>
-          {/* <Route exact path='/supplies' render={() => < /> */}
+          <Route exact path='/supplies' component={SuppliesForm} />
           <Route exact path="/check-in" component={CheckInForm} />
           <Route exact path="/check-out" component={CheckOutForm} />
         </CurrentCenterContext.Provider>

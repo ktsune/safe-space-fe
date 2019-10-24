@@ -41,10 +41,13 @@
   width: 100%;
 }
 
-#supplies-button, #check-in-button, 
-#check-out-button {
-  height: 75px;
+.Link {
   width: 25%;
+}
+
+.Link button {
+  height: 75px;
+  width: 100%;
   border-radius: 15px;
   background-color: #D5CF91;
   font-size: 25px;

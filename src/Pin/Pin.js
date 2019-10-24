@@ -10,7 +10,6 @@ const Pin = ({ selectPin, center, selectCenter }) => {
     setreliefCenter(center)
     updateHoverState(!isHovered)
   }
-  console.log(reliefCenter)
 
   if(!isHovered) {
     return(

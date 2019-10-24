@@ -1,3 +1,8 @@
+.CheckOutForm {
+  height: 100vh;
+  background-color: #9EA041;
+}
+
 .CheckOutForm_visitor {
   display: flex;
   align-items: center;
