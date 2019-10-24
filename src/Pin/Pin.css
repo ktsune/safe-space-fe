@@ -4,6 +4,16 @@
   transition: all .2s ease-in-out;
 }
 
-.Pin_img:hover {
-  transform: scale(1.5);
+.pin-hover {
+  padding: 10px;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 99;  
+  width: 200px;
+}
+
+.pin-hover p,
+.pin-hover h3 {
+  color: white;
 }

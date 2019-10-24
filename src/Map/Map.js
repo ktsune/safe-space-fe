@@ -20,10 +20,10 @@ const GET_CENTERS = gql`
   }
 `;
 
-const Map = () => {
+const Map = ({ selectCenter }) => {
   const [lat, updateLat] = useState(39.7392);
   const [lng, updateLng] = useState(-104.9903);
-  const [zoom, updateZoom] = useState(12);
+  const [zoom, updateZoom] = useState(13);
 
   const { loading, error, data } = useQuery(GET_CENTERS);
       
@@ -31,7 +31,7 @@ const Map = () => {
   if (error) return `Error! ${error.message}`;
   if (data) {
     var centersList = data.centers.map((center, index) => {
-      return <Pin center={center} lat={center.lat} lng={center.lng} text="My Marker" key={index}/>
+      return <Pin center={center} lat={center.lat} lng={center.lng} text="My Marker" key={index} selectCenter={selectCenter}/>
     });
   } 
 

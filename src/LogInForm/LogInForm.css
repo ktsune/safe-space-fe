@@ -5,11 +5,15 @@
   justify-content: center;
 }
 
+.LogInForm_img {
+  height: 100px;
+  margin-top: 5%;
+}
+
 .pick-relief-center-menu {
   display: flex;
   flex-direction: column;
-  width: 25%;
-  justify-content: center;
+  width: 80%;
 }
 
 #dropdown-menu {
