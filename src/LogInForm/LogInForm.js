@@ -9,9 +9,9 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
     <section className="LogInForm">
     {!isCenterSelected ? 
       <article className="pick-relief-center-menu">
+        <img alt="lotus-flower" className="LogInForm_img" src={require('../assets/lotus-flower.svg')} />
+        <h1>SafeSpace</h1>
         <Map selectCenter={selectCenter}/>
-        {/* <input id="dropdown-menu" placeholder="Find Relief Center..."/> */}
-        {/* <button onClick={() => selectCenter(true)}id="loginForm-submit-button">Submit</button> */}
       </article> 
     : 
     <article className="navigation-menu">
