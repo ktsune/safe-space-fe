@@ -5,7 +5,7 @@ const SplashPage = () => {
   return (
     <section className="SplashPage">
       <img alt="lotus-flower" id="load-img-lotus" src={require('../assets/lotus-flower.svg')}/>
-      <h1 id="loading-text">HeadCount</h1>
+      <h1 id="loading-text">SafeSpace</h1>
     </section>
   )
 }
