@@ -9,16 +9,9 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
     <section className="LogInForm">
     {!isCenterSelected ? 
       <article className="pick-relief-center-menu">
-        <Map />
+        <Map selectCenter={selectCenter}/>
         {/* <input id="dropdown-menu" placeholder="Find Relief Center..."/> */}
-        <button onClick={() => selectCenter(true)}id="loginForm-submit-button">Submit</button>
-        <div>
-          <p>{reliefCenter.name}</p>
-          <p>{reliefCenter.addressPrint}</p>
-          <p>{reliefCenter.website}</p>
-          <p>{reliefCenter.email}</p>
-          <p>{reliefCenter.phone}</p>
-        </div>
+        {/* <button onClick={() => selectCenter(true)}id="loginForm-submit-button">Submit</button> */}
       </article> 
     : 
     <article className="navigation-menu">
