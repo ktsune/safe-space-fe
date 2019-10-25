@@ -1,6 +1,7 @@
 .BasicInfoForm {
   width: 100%;
  display: flex;
+ justify-content: center;
   align-items: center;
   margin-top: 20px;
   display: inline-block;
@@ -21,7 +22,7 @@
   border-radius: 5px;
   margin-bottom: 10px;
   margin-left: 20px;
-  width: 75%;
+  width: 40%;
   font-size: 20px;
 }
 
