@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import './App.css'
+import Header from '../Header/Header'
 import SplashPage from '../SplashPage/SplashPage'
 import LogInForm from '../LogInForm/LogInForm'
 import CheckInForm from "../CheckInForm/CheckInForm";
@@ -25,6 +26,7 @@ const App = () => {
     return (
       <ApolloProvider client={client}>
       <section className="App">
+        <Header />
         <CurrentCenterContext.Provider value={currentReliefCenter}>
           <Route exact path="/">
             {isLoading ? (
