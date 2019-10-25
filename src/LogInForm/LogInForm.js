@@ -3,7 +3,12 @@ import Map from '../Map/Map'
 import  { NavLink } from 'react-router-dom';
 import './LogInForm.css'
 
+
 const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
+
+  // var originalNamesArray = data.usersAtCenter;
+  // updateNames(data.usersAtCenter)
+
 
   return (
     <section className="LogInForm">
@@ -22,7 +27,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
         <button id="check-in-button">Check In</button>
       </NavLink>
       <NavLink to="/check-out" className="Link" id="check-out-button">
-        <button id="check-out-button">Check Out</button>
+            <button id="check-out-button">Check Out</button>
       </NavLink>
     </article>
     }
