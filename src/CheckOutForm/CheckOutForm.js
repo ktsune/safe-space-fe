@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import '../CheckOutForm/CheckOutForm.css'
+import React, { useState, useContext } from 'react';
+import { UsersContext } from '../Contexts/UsersContext';
+import '../CheckOutForm/CheckOutForm.css';
+
 
 const CheckOutForm = () => {
-  let originalNamesArray = ['David', 'Chirs', 'Ann', 'Jacob'];
-  const [search, updateSearch] = useState('');
-  const [names, updateNames] = useState(['David', 'Chirs', 'Ann', 'Jacob'])
-
-  let namesArray = !search ? originalNamesArray : names
+  const { currentUsers, setCurrentUsers } = useContext(UsersContext)
+  const [search, updateSearch] = useState('');  
+  
+  let namesArray = !search ? currentUsers.original : currentUsers.result 
   let namesList = namesArray.map((name, index) => {
     return <div className="CheckOutForm_visitor" key={index}>
-      <p>{name}</p>
+      <p>{name.name}</p>
       <button>X</button>
     </div>
   })
@@ -17,10 +18,10 @@ const CheckOutForm = () => {
   const handleSearch = (e) => {
     updateSearch(e.target.value)
     if(!e.target.value) {
-      updateNames(originalNamesArray)
+      setCurrentUsers({ original: currentUsers.original, result: currentUsers.original })
     } else {
-    let filteredNames = names.filter(name => name.toLowerCase().includes(e.target.value.toLowerCase()))
-    updateNames(filteredNames)
+    let filteredNames = currentUsers.result.filter(({name}) => name.toLowerCase().includes(e.target.value.toLowerCase()))
+      setCurrentUsers({ ...currentUsers, result: filteredNames })
     }
   }
 

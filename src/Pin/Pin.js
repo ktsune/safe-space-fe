@@ -1,16 +1,35 @@
 import React, { useContext, useState } from 'react';
-import { CurrentCenterContext } from '../CurrentCenterContext';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
+import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
+import { UsersContext } from '../Contexts/UsersContext';
 import './Pin.css';
 
-const Pin = ({ selectPin, center, selectCenter }) => {
+const Pin = ({ center, selectCenter }) => {
   const [isHovered, updateHoverState] = useState(false);
   const { reliefCenter, setreliefCenter } = useContext(CurrentCenterContext);
+  const { currentUsers, setCurrentUsers } = useContext(UsersContext)
 
+  let GET_USERS = gql`
+    query {
+      usersAtCenter(centerId: ${reliefCenter.id}) {
+        id
+        name
+      }
+    }
+  `;
+
+  const { loading, error, data } = useQuery(GET_USERS);
+  
   const handleHover = () => {
     setreliefCenter(center)
     updateHoverState(!isHovered)
   }
-  console.log(reliefCenter)
+  
+  const handleSelectCenter = () => {
+    selectCenter(true)
+    setCurrentUsers({ ...currentUsers, result: data.usersAtCenter, original: data.usersAtCenter })
+  }
 
   if(!isHovered) {
     return(
@@ -26,7 +45,7 @@ const Pin = ({ selectPin, center, selectCenter }) => {
         <p>{reliefCenter.website}</p>
         <p>{reliefCenter.email}</p>
         <p>{reliefCenter.phone}</p>
-        <button onClick={() => selectCenter(true)}>Go to Center!</button>
+        <button onClick={handleSelectCenter}>Go to Center!</button>
       </div>
     )
   }

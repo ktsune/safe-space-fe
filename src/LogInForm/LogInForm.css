@@ -19,8 +19,11 @@
   width: 100%;
 }
 
-#supplies-button, #check-in-button, 
-#check-out-button {
+.Link {
+  width: 25%;
+}
+
+.Link button {
   height: 75px;
   width: 100%;
   border-radius: 15px;
