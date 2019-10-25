@@ -9,8 +9,6 @@ const LogInForm = ({ selectCenter, isCenterSelected }) => {
     <section className="LogInForm">
     {!isCenterSelected ? 
       <article className="pick-relief-center-menu">
-        <img alt="lotus-flower" className="LogInForm_img" src={require('../assets/lotus-flower.svg')} />
-        <h1>SafeSpace</h1>
         <Map selectCenter={selectCenter}/>
       </article> 
     : 

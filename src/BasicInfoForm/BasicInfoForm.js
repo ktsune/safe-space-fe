@@ -4,6 +4,7 @@ import './BasicInfoForm.css'
 const BasicInfoForm = () => {
   return (
     <form className="BasicInfoForm">
+      <h1 id="basic-info-header">Basic Information:</h1>
       <div id="fullname-container">
         <label id="fullname-label" for="fullname">Full Name:</label>
         <input id="fullname" type="text" placeholder="Add Full Name"/>
