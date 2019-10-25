@@ -20,7 +20,7 @@ class EmergencyContactForm extends React.Component {
   render() {
   return (
     <form className="EmergencyContactForm">
-      <h1>Emergency Contact</h1>
+      <h1 id="emergency-contact-info-header">Emergency Contact Information:</h1>
 
       <div id='field'> 
        <label id="fullname-label"for="Full Name">Name:</label>
