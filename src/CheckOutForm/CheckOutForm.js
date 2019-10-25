@@ -5,13 +5,7 @@ import '../CheckOutForm/CheckOutForm.css';
 
 const CheckOutForm = () => {
   const { currentUsers, setCurrentUsers } = useContext(UsersContext)
-  console.log('currentUsers', currentUsers)
-  // console.log('originalNamesArray', originalNamesArray)
-  // const originalNamesArray = ['chirs', 'david'];
-
-  const [search, updateSearch] = useState('');
-  // const [names, updateNames] = useState(currentUsers)
-  
+  const [search, updateSearch] = useState('');  
   
   let namesArray = !search ? currentUsers.original : currentUsers.result 
   let namesList = namesArray.map((name, index) => {

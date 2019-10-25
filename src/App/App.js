@@ -23,10 +23,6 @@ const App = () => {
 
   const currentReliefCenter = useMemo(() => ({ reliefCenter, setreliefCenter }), [reliefCenter, setreliefCenter]);
   const users = useMemo(() => ({ currentUsers, setCurrentUsers }), [currentUsers, setCurrentUsers]);
-
-    
-    //add componentDidMount to fetch relief center data
-    // once fetched, set isLoading to false
     
     return (
       <ApolloProvider client={client}>
@@ -40,7 +36,6 @@ const App = () => {
                   <LogInForm
                   selectCenter={selectCenter}
                   isCenterSelected={isCenterSelected}
-                  reliefCenter={reliefCenter}
                   />
                   )}
             </Route>

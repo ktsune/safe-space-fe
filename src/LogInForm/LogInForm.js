@@ -4,11 +4,7 @@ import  { NavLink } from 'react-router-dom';
 import './LogInForm.css'
 
 
-const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
-
-  // var originalNamesArray = data.usersAtCenter;
-  // updateNames(data.usersAtCenter)
-
+const LogInForm = ({ selectCenter, isCenterSelected }) => {
 
   return (
     <section className="LogInForm">
