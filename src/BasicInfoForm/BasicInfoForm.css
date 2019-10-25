@@ -1,21 +1,34 @@
 .BasicInfoForm {
   width: 100%;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#fullname-container,
+#age-container,
+#phone-container {
+  width: 50%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* label, input {
-  width: 25%;
-  font-size: 25px;
-} */
-/* 
-input {
+#fullname, #age, #phone {
   height: 50px;
   border-radius: 5px;
-  margin-bottom: 25px;
-} */
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 40%;
+  font-size: 20px;
+}
 
-/* label {
-  align-self: left;
-} */
+#fullname-label, #age-label, #phone-label {
+width: 30%;
+text-align: end;
+font-size: 20px;
+}
+

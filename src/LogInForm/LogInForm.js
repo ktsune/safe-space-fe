@@ -1,8 +1,7 @@
-import React from 'react';
-import Map from '../Map/Map'
-import  { NavLink } from 'react-router-dom';
-import './LogInForm.css'
-
+import React from "react";
+import Map from "../Map/Map";
+import { NavLink } from "react-router-dom";
+import "./LogInForm.css";
 
 const LogInForm = ({ selectCenter, isCenterSelected }) => {
 
@@ -28,11 +27,7 @@ const LogInForm = ({ selectCenter, isCenterSelected }) => {
     </article>
     }
     </section>
-  )
-}
+  );
+};
 
-export default LogInForm
-
-
-
-
+export default LogInForm;

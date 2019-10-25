@@ -1,36 +1,14 @@
 .LogInForm {
-  height: 100vh;
-  background-color: #9EA041;
+  height: 85vh;
   display: flex;
   justify-content: center;
 }
 
-.LogInForm_img {
-  height: 100px;
-  margin-top: 5%;
-}
-
 .pick-relief-center-menu {
   display: flex;
-  flex-direction: column;
   width: 80%;
-}
-
-#dropdown-menu {
-  height: 50px;
-  border-radius: 15px;
-  font-size: 30px;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-#loginForm-submit-button {
-  height: 40px;
-  width: 50%;
-  align-self: center;
-  border-radius: 5px;
-  background-color: #D5CF91;
-  font-size: 25px;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation-menu {
@@ -51,4 +29,9 @@
   border-radius: 15px;
   background-color: #D5CF91;
   font-size: 25px;
+}
+
+#supplies-button-link, #check-in-button-link, 
+#check-out-button-link {
+  width: 25%;
 }
