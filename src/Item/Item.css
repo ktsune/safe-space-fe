@@ -1,0 +1,16 @@
+.Item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+#check-or-uncheck {
+  height: 20px;
+  width: 10%;
+}
+
+#item-name {
+  width: 25%;
+}
