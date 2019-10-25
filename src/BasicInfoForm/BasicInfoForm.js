@@ -4,16 +4,18 @@ import './BasicInfoForm.css'
 const BasicInfoForm = () => {
   return (
     <form className="BasicInfoForm">
-
-        <label for="Full Name">First Name:</label>
-        <input id="fullname" type="text" placeholder="Add Fullname"/>
-
-        <label for="age">Age:</label>
+      <div id="fullname-container">
+        <label id="fullname-label" for="fullname">Full Name:</label>
+        <input id="fullname" type="text" placeholder="Add Full Name"/>
+      </div>
+      <div id="age-container">
+        <label id="age-label" for="age">Age:</label>
         <input id="age" type='text' placeholder="Add Age"/>
-
-        <label for="phone">Phone Number:</label>
+      </div>
+      <div id="phone-container">
+        <label id="phone-label" for="phone">Phone Number:</label>
         <input id="phone" type='text' placeholder="Add Phone Number"/>
-
+      </div>
     </form>
   )
 }
