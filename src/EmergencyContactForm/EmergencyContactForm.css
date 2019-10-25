@@ -1,8 +1,31 @@
 .EmergencyContactForm {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#field {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#relationship {
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 40%;
+  font-size: 20px;
+}
+
+#fullname-label, #phone-label, #relationship-label {
+  width: 30%;
+  text-align: end;
+  font-size: 20px;
   }
-
-
