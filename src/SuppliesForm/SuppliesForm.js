@@ -8,7 +8,7 @@ const SuppliesForm = () => {
   return (
     <section>
       <h1>Heyo!</h1>
-      <h3>{reliefCenter.name}</h3>
+      <h3>Inventory for {reliefCenter.name}</h3>
     </section>
   )
 }

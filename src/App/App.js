@@ -19,7 +19,7 @@ const client = new ApolloClient({
 const App = () => {
   const [reliefCenter, setreliefCenter] = useState('');
   const [currentUsers, setCurrentUsers] = useState({ result: [], original: [] })
-  const [isCenterSelected, selectCenter] = useState(false)
+  const [isCenterSelected, selectCenter] = useState(true)
   const [isLoading, setIsLoading] = useState(false);
 
   const currentReliefCenter = useMemo(() => ({ reliefCenter, setreliefCenter }), [reliefCenter, setreliefCenter]);
