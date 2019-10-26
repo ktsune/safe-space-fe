@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Map from "../Map/Map";
 import { NavLink } from "react-router-dom";
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
+import { ItemsContext } from '../Contexts/ItemsContext';
 import "./LogInForm.css";
 
 const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
+  const { currentItems, setCurrentItems } = useContext(ItemsContext);
+
   console.log(reliefCenter.id)
 
   let GET_ITEMS = gql`
@@ -22,9 +25,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
 
 
   const fetchItems = () => {
-    console.log(reliefCenter)
-    console.log(data.itemsAtCenter)
-    console.log(error)
+    setCurrentItems(data.itemsAtCenter)
   }
 
   return (
