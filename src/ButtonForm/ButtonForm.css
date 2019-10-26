@@ -14,15 +14,15 @@ align-items: center;
 }
 
 #addToGroup-text {
-  font-size: 15px;
+  font-size: 30px;
   margin: 1px;
 
 }
 
 #add-dependent-button {
-  width: 23px;
+  width: 40px;
 }
 
 #submit {
-  height: 19px;
+  height: 40px;
 }
