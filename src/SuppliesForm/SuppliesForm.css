@@ -1,0 +1,7 @@
+.itemsList_section {
+  display: flex;
+}
+
+.itemsList_section div {
+  display: flex;
+}
