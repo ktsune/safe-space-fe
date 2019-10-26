@@ -9,9 +9,9 @@ const CheckOutForm = () => {
   
   let namesArray = !search ? currentUsers.original : currentUsers.result 
   let namesList = namesArray.map((name, index) => {
-    return <div className="CheckOutForm_visitor" key={index}>
-      <p>{name.name}</p>
-      <button>X</button>
+    return <div className="CheckOutForm_visitor button push" id="push" key={index}>
+      <p>Check {name.name} Out </p>
+      <button id='delete-visitor'>X</button>
     </div>
   })
   
