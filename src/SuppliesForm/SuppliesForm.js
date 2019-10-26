@@ -42,6 +42,7 @@ const SuppliesForm = () => {
       <h3>Inventory for {reliefCenter.name}</h3>
       <article>
         {itemsList}
+        <button>Save Changes</button>
       </article>
     </section>
   )
