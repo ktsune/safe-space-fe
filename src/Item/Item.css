@@ -14,3 +14,8 @@
 #item-name {
   width: 25%;
 }
+
+#item-name:hover {
+  background-color: white;
+  color: black;
+}
