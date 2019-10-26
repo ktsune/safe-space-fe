@@ -1,9 +1,14 @@
 import React, {useContext } from 'react';
 import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
+import { ItemsContext } from '../Contexts/ItemsContext';
+
 
 
 const SuppliesForm = () => {
   const { reliefCenter, setreliefCenter } = useContext(CurrentCenterContext);
+  const { currentItems, setCurrentItems } = useContext(ItemsContext);
+
+  console.log(currentItems)
 
   return (
     <section>

@@ -1,6 +1,16 @@
 .CheckOutForm {
   height: 100vh;
   background-color: #9EA041;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CheckOutForm_input {
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+  margin: 20px;
 }
 
 .CheckOutForm_visitor {
@@ -23,6 +33,7 @@
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   border: 1px solid white;
   padding: 20px;
+  width: 90%;
 }
 
 .button {

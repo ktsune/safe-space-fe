@@ -1,9 +1,31 @@
 import React from "react";
 import Map from "../Map/Map";
 import { NavLink } from "react-router-dom";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 import "./LogInForm.css";
 
-const LogInForm = ({ selectCenter, isCenterSelected }) => {
+const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
+  console.log(reliefCenter.id)
+
+  let GET_ITEMS = gql`
+    query {
+      itemsAtCenter(centerId: ${reliefCenter.id}) {
+      id
+      name
+      quantity
+      }
+    }
+  `;
+
+  const { loading, error, data } = useQuery(GET_ITEMS);
+
+
+  const fetchItems = () => {
+    console.log(reliefCenter)
+    console.log(data.itemsAtCenter)
+    console.log(error)
+  }
 
   return (
     <section className="LogInForm">
@@ -14,7 +36,7 @@ const LogInForm = ({ selectCenter, isCenterSelected }) => {
     : 
     <article className="navigation-menu">
           <button className="LogInForm_button-back" onClick={() => selectCenter(false)}>Back to Home</button>
-      <NavLink to="/supplies" className="Link" id="supplies-button">
+      <NavLink to="/supplies" className="Link" id="supplies-button" onClick={fetchItems}>
         <button id="supplies-button">Supplies</button>
       </NavLink>
       <NavLink to="/check-in" className="Link" id="check-in-button">

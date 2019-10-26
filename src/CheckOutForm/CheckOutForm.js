@@ -28,6 +28,7 @@ const CheckOutForm = () => {
   return (
     <section className="CheckOutForm">
       <input 
+        className="CheckOutForm_input"
         type="text"
         placeholder="Search the database..."
         name="search"
