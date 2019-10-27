@@ -8,7 +8,7 @@ import './SuppliesForm.css';
 const SuppliesForm = () => {
   const { reliefCenter, setreliefCenter } = useContext(CurrentCenterContext);
   const { currentItems, setCurrentItems } = useContext(ItemsContext);
-  const [itemToEdit, setItemToEdit] = useState([]);
+  const [idsToEdit, setIdsToEdit] = useState([]);
 
   const updateQuantity = (id, type) => {
     let updatedItems = currentItems.map(item => {
@@ -24,14 +24,19 @@ const SuppliesForm = () => {
         return item
       }
     })
-    setCurrentItems(updatedItems)
-    let editedItems = [...itemToEdit, id]
-    setItemToEdit([...new Set(editedItems)]);
+    setCurrentItems(updatedItems);
+    let editedItems = [...idsToEdit, id];
+    setIdsToEdit([...new Set(editedItems)]);
   }
 
   const hasBeenEdited = (id) => {
-    let boolean = itemToEdit.find(itemId => itemId === id);
-    return boolean;
+    return idsToEdit.find(itemId => itemId === id);
+  }
+
+  const saveChanges = (item) => {
+    let filteredIds = idsToEdit.filter(id => id !== item.id);
+    setIdsToEdit(filteredIds)
+    console.log(item)
   }
 
   const itemsList = currentItems.map((item, index) => {
@@ -42,12 +47,11 @@ const SuppliesForm = () => {
           <p>{item.quantity}</p>
         <button onClick={() => updateQuantity(item.id, 'increment')}>+</button>
       </div>
-      { hasBeenEdited(item.id) && <button>Save Changes</button> }
+      { hasBeenEdited(item.id) && <button onClick={() => saveChanges(item)}>Save Changes</button> }
     </section>
   })
 
-  console.log(currentItems)
-  console.log(itemToEdit)
+  console.log(idsToEdit)
   return (
     <section>
       <h1>Heyo!</h1>
