@@ -16,6 +16,14 @@
   width: 50%;
 }
 
+#new-item {
+  font-size: 20px;
+  padding-left: 5px;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+}
+
 #item-name:hover {
   background-color: white;
   color: black;
@@ -27,9 +35,9 @@
   justify-content: center;
   align-items: center;
 }
-#dietary-item,
+/* #dietary-item,
 #medications-item,
 #allergies-item,
 #other-item {
   margin-left: 9%;
-}
+} */

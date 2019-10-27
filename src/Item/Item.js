@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import "./Item.css";
 
-const Item = ({ key, id, item }) => {
+const Item = ({ items, item, setItems }) => {
   const [isNeeded, setIsNeeded] = useState(false);
-  const [addText, setAddText] = useState();
+  const [newItem, setNewItem] = useState("")
 
-  console.log(item);
+  const handleChange = e => setNewItem(e.target.value);
+  const handleSubmit = (e, newItem) => {
+    e.preventDefault();
+    console.log("things")
+    setItems([...items, newItem])
+  }
+
   return (
     <article className="Item">
       <div id="checkbox-item-container">
@@ -19,15 +25,22 @@ const Item = ({ key, id, item }) => {
           }
           onClick={e => setIsNeeded(!isNeeded)}
         />
-        <h3 id="item-name" onClick={e => setIsNeeded(!isNeeded)}>
-          {item}
-        </h3>
+        {item === "add item" ?
+        <div id="add-item-container"> 
+        <input 
+        id="new-item" 
+        type="text" 
+        placeholder="Add Item" 
+        name="name" 
+        value={newItem} 
+        onChange={handleChange} 
+        />
+        <button type="submit" onClick={e => handleSubmit(e, newItem)}>+++</button>
+        </div> 
+        : 
+        <h3 id="item-name" onClick={e => setIsNeeded(!isNeeded)}>{item}</h3>
+        }
       </div>
-      {/* { item === 'dietary restrictions' && <input id="dietary-item" type="text" placeholder="Add item here" />} */}
-      { item === 'medications' && <input id="medications-item" type="text" placeholder="Add item here" />}
-      {/* { item === 'allergies' && <input id="allergies-item" type="text" placeholder="Add item here" />} */}
-      { item === 'other' && <input id="other-item" type="text" placeholder="Add item here" />}
-
     </article>
   );
 };

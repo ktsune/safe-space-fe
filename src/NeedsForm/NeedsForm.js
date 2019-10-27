@@ -2,22 +2,14 @@ import React, { useState } from "react";
 import Item from "../Item/Item";
 import "./NeedsForm.css";
 
-const NeedsForm = () => {
-  const [items, setItems] = useState([
-    "diapers",
-    "baby wipes",
-    "breastfeeding supplies",
-    "infant formula",
-    "feminine products",
-    "phone charger (iphone)",
-    "phone charger (android)",
-    "medications",
-    "other"
-  ]);
-
+const NeedsForm = ({items, setItems}) => {
   const allItems = items.map((item, index) => {
-    return <Item key={index + 1} id={index + 1} item={item} />;
+    return <Item key={index + 1} id={index + 1} items={items} item={item} setItems={setItems}/>;
   });
+
+  // const addItem = (newItem) => {
+  //   setItems([...items, newItem])
+  // }
 
   return (
     <section className="NeedsForm">

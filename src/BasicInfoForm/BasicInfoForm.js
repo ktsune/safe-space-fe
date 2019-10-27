@@ -13,11 +13,11 @@ const BasicInfoForm = ({basicInfo, setBasicInfo}) => {
       </div>
       <div id="age-container">
         <label id="age-label" for="age">Age:</label>
-        <input id="age" type='text' placeholder="Add Age" onChange={handleChange}/>
+        <input id="age" type='text' placeholder="Add Age" onChange={handleChange} name="age" value={basicInfo.age}/>
       </div>
       <div id="phone-container">
         <label id="phone-label" for="phone">Phone Number:</label>
-        <input id="phone" type='text' placeholder="Add Phone Number" onChange={handleChange}/>
+        <input id="phone" type='text' placeholder="Add Phone Number" onChange={handleChange} name="phone" value={basicInfo.phone}/>
       </div>
     </form>
   )
