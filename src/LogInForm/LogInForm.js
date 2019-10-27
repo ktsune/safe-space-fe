@@ -9,8 +9,6 @@ import "./LogInForm.css";
 const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
   const { currentItems, setCurrentItems } = useContext(ItemsContext);
 
-  console.log(reliefCenter.id)
-
   let GET_ITEMS = gql`
     query {
       itemsAtCenter(centerId: ${reliefCenter.id}) {
