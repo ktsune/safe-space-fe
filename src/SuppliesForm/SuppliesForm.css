@@ -1,7 +1,41 @@
-.itemsList_section {
-  display: flex;
+.SuppliesForm_section {
+  height: 100vh;
 }
 
-.itemsList_section div {
+.SuppliesForm_section h2 {
+  text-align: center;
+}
+
+.itemsList_section {
   display: flex;
+  justify-content: space-between;
+  padding: 0px 200px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.itemsList_quantity-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemsList_quantity-container button {
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.itemsList_save-changes {
+  height: 50px;
+  width: 100px;
+  font-size: 12px;
+  position: absolute;
+  right: 50px;
 }
