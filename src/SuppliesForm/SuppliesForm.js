@@ -1,6 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { useMutation } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
 import { patchItem } from '../apiCalls/apiCalls';
 import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
 import { ItemsContext } from '../Contexts/ItemsContext';
@@ -48,8 +46,6 @@ const SuppliesForm = () => {
       }
     })
     setCurrentItems(updatedItems);
-    // let editedItems = [...idsToEdit, id];
-    // setIdsToEdit([...new Set(editedItems)]);
   }
   
   const hasBeenEdited = (id) => {
@@ -60,13 +56,11 @@ const SuppliesForm = () => {
     let filteredIds = idsToEdit.filter(id => id !== item.id);
     setIdsToEdit(filteredIds)
     if (quantityInput) {
-      // let itemObj = { id: item.id, name: item.name, quantity: quantityInput }
       let itemObj = { ...item, quantity: quantityInput }
       try {
         await patchItem(itemObj, reliefCenter);
         updateQuantityOnInput(item.id)
       } catch (error) {
-        console.log(error)
         setErrorMsg('There was an error saving your changes.')
       }
     } else {
