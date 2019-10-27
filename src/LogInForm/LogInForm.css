@@ -17,6 +17,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .Link {
@@ -35,3 +36,15 @@
 #check-out-button-link {
   width: 25%;
 }
+
+.LogInForm_button-back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  background-color: #D5CF91;
+  font-size: 16px;
+}
+
