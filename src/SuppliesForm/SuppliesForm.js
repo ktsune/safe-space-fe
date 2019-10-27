@@ -4,8 +4,6 @@ import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
 import { ItemsContext } from '../Contexts/ItemsContext';
 import './SuppliesForm.css';
 
-
-
 const SuppliesForm = () => {
   const { reliefCenter, setreliefCenter } = useContext(CurrentCenterContext);
   const { currentItems, setCurrentItems } = useContext(ItemsContext);
