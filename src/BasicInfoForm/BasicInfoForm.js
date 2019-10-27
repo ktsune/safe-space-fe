@@ -1,7 +1,8 @@
 import React from 'react'
 import './BasicInfoForm.css'
 
-const BasicInfoForm = () => {
+const BasicInfoForm = ({basicInfo, setBasicInfo}) => {
+  
   return (
     <form className="BasicInfoForm">
       <h1 id="basic-info-header">Basic Information:</h1>

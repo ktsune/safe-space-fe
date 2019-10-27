@@ -11,9 +11,7 @@ const NeedsForm = () => {
     "feminine products",
     "phone charger (iphone)",
     "phone charger (android)",
-    "dietary restrictions",
     "medications",
-    "allergies",
     "other"
   ]);
 
