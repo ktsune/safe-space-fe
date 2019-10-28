@@ -2,15 +2,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  margin: auto;
 }
 
 #check-or-uncheck {
   height: 20px;
-  width: 10%;
+  width: 25%;
+  margin-left: 15%;
 }
 
 #item-name {
-  width: 25%;
+  width: 50%;
 }
+
+#new-item {
+  font-size: 20px;
+  padding-left: 5px;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+#item-name:hover {
+  background-color: white;
+  color: black;
+}
+
+#checkbox-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #dietary-item,
+#medications-item,
+#allergies-item,
+#other-item {
+  margin-left: 9%;
+} */
