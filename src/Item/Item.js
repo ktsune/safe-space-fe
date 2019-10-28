@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Item.css";
 
-const Item = ({ item, items, setItems}) => {
+const Item = ({ item, items, setItems, medication, removeMed}) => {
   const [isNeeded, setIsNeeded] = useState(false);
   const [newItem, setNewItem] = useState("")
 
@@ -28,6 +28,11 @@ const Item = ({ item, items, setItems}) => {
           />        
           <button type="submit" onClick={e => handleSubmit(e, newItem)}>+++</button>
         </div> 
+      : medication ?
+        <div id="medical-item-container">
+          <h3 id="medication-name">{medication}</h3>
+          <button id="remove-medication-button" onClick={e => removeMed(e, medication.id)}>X</button>
+        </div>
       :
         <div id="checkbox-item-container">
           <img

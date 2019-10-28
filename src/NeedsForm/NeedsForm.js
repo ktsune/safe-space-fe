@@ -7,9 +7,9 @@ const NeedsForm = ({items, setItems}) => {
     return <Item key={index + 1} id={index + 1} items={items} setItems={setItems} item={item}/>;
   });
 
-  // const addItem = (newItem) => {
-  //   setItems([...items, newItem])
-  // }
+  // const allMeds = medications.map((medication, index) => {
+  //   return <Item key={index + 1} id={index + 1} medication={medication} setMedications={setMedications} />
+  // })
 
   return (
     <section className="NeedsForm">
