@@ -4,7 +4,7 @@ import "./NeedsForm.css";
 
 const NeedsForm = ({items, setItems}) => {
   const allItems = items.map((item, index) => {
-    return <Item key={index + 1} id={index + 1} items={items} item={item} setItems={setItems}/>;
+    return <Item key={index + 1} id={index + 1} items={items} setItems={setItems} item={item}/>;
   });
 
   // const addItem = (newItem) => {

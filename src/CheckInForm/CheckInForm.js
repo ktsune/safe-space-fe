@@ -28,15 +28,11 @@ const CheckInForm = () => {
         relationship: ""
     })
 
-    
-
-
-
     return (
         <section className="CheckInForm">
             <BasicInfoForm basicInfo={basicInfo} setBasicInfo={setBasicInfo}/>
             <NeedsForm items={items} setItems={setItems}/>
-            <EmergencyContactForm emergencyInfo={emergencyInfo} setInfo={setEmergencyInfo}/>
+            <EmergencyContactForm emergencyInfo={emergencyInfo} setEmergencyInfo={setEmergencyInfo}/>
             <ButtonForm /> 
         </section>
     )
