@@ -7,11 +7,10 @@ import ButtonForm from '../ButtonForm/ButtonForm'
 import './CheckInForm.css'
 
 const CheckInForm = () => {
-    const [basicInfo, setBasicInfo] = useState({
-        name: "",
-        age: "",
-        phone: ""
-    })
+    const [personName, setPersonName] = useState("")
+    const [personAge, setPersonAge] = useState("")
+    const [personPhone, setPersonPhone] = useState("")
+
     const [items, setItems] = useState([
         "diapers",
         "baby wipes",
@@ -22,25 +21,41 @@ const CheckInForm = () => {
         "phone charger (android)",
         "medications",
         "add item"
-      ])
+    ])
     
     const [medication, setMedication] = useState("")
-
     const [allMedications, setAllMedications] = useState([])
 
-    const [emergencyInfo, setEmergencyInfo] = useState({
-        name: "",
-        phone: "",
-        relationship: ""
+    const [emergencyName, setEmergencyName] = useState("")
+    const [emergencyPhone, setEmergencyPhone] = useState("")
+    const [emergencyRelationship, setEmergencyRelationship] = useState("")
+
+    const [personData, setPersonData] = useState({
+        name: personName,
+        age: personAge,
+        phone: personPhone,
+        needs: items,
+        medications: allMedications,
+        emergencyName: emergencyName,
+        emergencyPhone: emergencyPhone,
+        emergencyRelationship : emergencyRelationship
     })
 
     return (
         <section className="CheckInForm">
-            <BasicInfoForm basicInfo={basicInfo} setBasicInfo={setBasicInfo}/>
+            <BasicInfoForm 
+            personName={personName} setPersonName={setPersonName} 
+            personAge={personAge} setPersonAge={setPersonAge}
+            personPhone={personPhone} setPersonPhone={setPersonPhone}
+            />
             <NeedsForm items={items} setItems={setItems} />
-            <MedicationForm medication={medication} setMedication={setMedication} allMedications={allMedications} setAllMedications={setAllMedications}/>
-            <EmergencyContactForm emergencyInfo={emergencyInfo} setEmergencyInfo={setEmergencyInfo}/>
-            <ButtonForm /> 
+            <MedicationForm items={items} setItems={setItems} medication={medication} setMedication={setMedication} allMedications={allMedications} setAllMedications={setAllMedications}/>
+            <EmergencyContactForm 
+            emergencyName={emergencyName} setEmergencyName={setEmergencyName}
+            emergencyPhone={emergencyPhone} setEmergencyPhone={setEmergencyPhone}
+            emergencyRelationship={emergencyRelationship} setEmergencyRelationship={setEmergencyRelationship}
+            />
+            <ButtonForm personData={personData} setPersonData={setPersonData}/> 
         </section>
     )
 }
