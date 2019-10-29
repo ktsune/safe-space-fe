@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { patchItem } from '../apiCalls/apiCalls';
+import { patchItem, addItem } from '../apiCalls/apiCalls';
 import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
 import { ItemsContext } from '../Contexts/ItemsContext';
 import './SuppliesForm.css';
@@ -9,7 +9,9 @@ const SuppliesForm = () => {
   const { currentItems, setCurrentItems } = useContext(ItemsContext);
   const [idsToEdit, setIdsToEdit] = useState([]);
   const [quantityInput, setQuantityInput] = useState("");
+  const [itemToAdd, setItemToAdd] = useState('');  
   const [errorMsg, setErrorMsg] = useState("");
+  const [isConsumable, setConsumable] = useState(false);
   
   const updateQuantity = (id, type) => {
     let updatedItems = currentItems.map(item => {
@@ -79,6 +81,27 @@ const SuppliesForm = () => {
       setIdsToEdit(filteredIds)
     }
   }
+
+  const handleAddItem = (e) => {
+    setItemToAdd(e.target.value)
+  }
+
+  const submitNewItem = async (e) => {
+    e.preventDefault();
+    let newItem = {
+      name: itemToAdd, 
+      quantity: 0, 
+      consumable: isConsumable 
+    }
+    console.log(newItem)
+    let response  = await addItem(newItem, reliefCenter.id)
+    console.log(response)
+    // setCurrentItems([...currentItems, newItem])
+  }
+
+  const handleConsumable = () => {
+    setConsumable(!isConsumable)
+  }
         
   const itemsList = currentItems.map((item, index) => {
     return <section key={index} className="itemsList_section">
@@ -110,6 +133,31 @@ const SuppliesForm = () => {
       <article>
         {itemsList}
       </article>
+      <form className="SuppliesForm-add-item">
+        <label>Add an item:
+          <input 
+            type="text"
+            name="addItem"
+            placeholder="Enter item name..."
+            value={itemToAdd}
+            onChange={handleAddItem}
+            autoComplete="off"
+          />
+        </label>
+        <label>Is the item consumable:
+          <img
+            className="consumable-check"
+            alt="add new item"
+            src={
+              !isConsumable
+                ? require("../assets/unchecked.svg")
+                : require("../assets/checked.svg")
+            }
+            onClick={handleConsumable}
+          />
+        </label>
+        <button onClick={submitNewItem}>Add Item</button>
+      </form>
     </section>
   )
 }

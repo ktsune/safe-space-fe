@@ -1,7 +1,3 @@
-.SuppliesForm_section {
-  height: 100vh;
-}
-
 .SuppliesForm_section h2 {
   text-align: center;
 }
@@ -38,4 +34,16 @@
   font-size: 12px;
   position: absolute;
   right: 50px;
+}
+
+.SuppliesForm-add-item {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 40%;
+  align-items: center;
+}
+
+.consumable-check {
+  height: 20px;
 }

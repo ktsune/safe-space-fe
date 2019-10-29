@@ -24,7 +24,36 @@ export const getItems = async reliefCenter => {
   }
 };
 
+export const addItem = async (item, centerId) => {
+  console.log(item)
+  console.log(centerId)
+  let options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  let queryParams = `mutation {createItem(name: "${item.name}", quantity: ${item.quantity}, consumable: ${item.consumable}, centerId: ${centerId}) {item {id name quantity}}}`;
+
+  let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
+
+  try {
+    let resp = await fetch(url, options);
+
+    if (!resp.ok) {
+      throw new Error("There was an adding that item");
+    }
+
+    let data = await resp.json();
+    return data
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const patchItem = async (item, reliefCenter) => {
+  console.log(item)
   let options = {
     method: "POST",
     headers: {
