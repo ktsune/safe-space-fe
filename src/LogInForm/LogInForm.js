@@ -39,10 +39,10 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
             <button id="supplies-button">Supplies</button>
           </NavLink>
           <NavLink to="/check-in" className="Link" id="check-in-button">
-            <button id="check-in-button">Check In</button>
+            <button id="check-in-button">Check-In Displaced Person</button>
           </NavLink>
           <NavLink to="/check-out" className="Link" id="check-out-button">
-            <button id="check-out-button">Check Out</button>
+            <button id="check-out-button">Check-Out Displaced Person</button>
           </NavLink>
         </article>
       )}
