@@ -47,7 +47,7 @@ const App = () => {
                   )}
               </Route>
               <Route exact path='/supplies' component={SuppliesForm} />
-              <Route exact path="/check-in" component={CheckInForm} />
+              <Route exact path="/check-in" render={() => <CheckInForm reliefCenter={reliefCenter}/>} />
               <Route exact path="/check-out" component={CheckOutForm} />
             </ItemsContext.Provider>
           </UsersContext.Provider>
