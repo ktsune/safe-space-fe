@@ -9,6 +9,7 @@ const CheckInForm = ({ reliefCenter }) => {
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [personPhone, setPersonPhone] = useState("");
+  const [neededItems, setNeededItems] = useState([])
   const [items, setItems] = useState([
     "diapers",
     "baby wipes",
@@ -39,7 +40,7 @@ const CheckInForm = ({ reliefCenter }) => {
     };
     let userId = await postNewUser(personData, reliefCenter);
 
-    await postNeeds(userId, [])
+    await postNeeds(userId, neededItems)
     await postEmergencyContacts(userId, personData)
   };
 
@@ -53,7 +54,7 @@ const CheckInForm = ({ reliefCenter }) => {
         personPhone={personPhone}
         setPersonPhone={setPersonPhone}
       />
-      <NeedsForm items={items} setItems={setItems} />
+      <NeedsForm items={items} setItems={setItems} neededItems={neededItems} setNeededItems={setNeededItems} />
       <EmergencyContactForm
         emergencyName={emergencyName}
         setEmergencyName={setEmergencyName}

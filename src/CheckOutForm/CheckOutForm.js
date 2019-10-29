@@ -28,6 +28,7 @@ const CheckOutForm = () => {
       }
 
       let data = await resp.json();
+      console.log(data)
       return data
 
     } catch (error) {
@@ -36,6 +37,7 @@ const CheckOutForm = () => {
   }  
 
   const deleteUser = async (id) => {
+    console.log(id)
     await deleteUserFromDB(id)
     let filteredUsers = currentUsers.original.filter(person => person.id != 3)
     setCurrentUsers({ result: filteredUsers, original: filteredUsers })
