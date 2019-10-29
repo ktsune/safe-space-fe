@@ -31,7 +31,7 @@
 }
 
 #relationship-label {
-  width: 35%;
+  width: 45%;
   text-align: end;
   font-size: 20px;
 }
@@ -52,7 +52,7 @@
 }
 
 #make-public-or-private-button {
-  width: 25%;
+  width: 30%;
   height: 45px;
   font-size: 20px;
   background-color: #782a30;
