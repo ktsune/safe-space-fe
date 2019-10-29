@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Item.css";
 
 const Item = ({ item, items, setItems, neededItems, setNeededItems}) => {
-  // const [isNeeded, setIsNeeded] = useState(false);
   const [newItem, setNewItem] = useState("")
 
   const handleChange = e => setNewItem(e.target.value);
@@ -10,13 +9,11 @@ const Item = ({ item, items, setItems, neededItems, setNeededItems}) => {
   const handleSubmit = (e, newItem) => {
     e.preventDefault();
     items.splice(items.length - 1, 0, newItem)
-    // setIsNeeded(true)
     setItems([...items])
     setNeededItems([...neededItems, newItem])
   }
 
   const handleCheck = (e) => {
-    // setIsNeeded(!isNeeded);
     if (!neededItems.includes(item)) {
       setNeededItems([...neededItems, item]);
     } else {

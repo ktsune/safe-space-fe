@@ -120,7 +120,6 @@ export const postNeeds = async (userId, needs) => {
       }
   
       let data = await resp.json();
-      console.log(data)
       return data;
     } catch (error) {
       throw error;
