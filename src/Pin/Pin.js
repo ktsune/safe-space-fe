@@ -5,7 +5,7 @@ import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
 import { UsersContext } from '../Contexts/UsersContext';
 import './Pin.css';
 
-const Pin = ({ center, selectCenter }) => {
+export const Pin = ({ center, selectCenter }) => {
   const [isHovered, updateHoverState] = useState(false);
   const { reliefCenter, setreliefCenter } = useContext(CurrentCenterContext);
   const { currentUsers, setCurrentUsers } = useContext(UsersContext)

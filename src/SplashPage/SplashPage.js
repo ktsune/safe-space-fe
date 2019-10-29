@@ -2,7 +2,7 @@ import React from 'react'
 import './SplashPage.css'
 
 
-const SplashPage = () => {
+export const SplashPage = () => {
 
   return (
     <section className="SplashPage">

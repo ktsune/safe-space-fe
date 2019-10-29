@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Item from "../Item/Item";
 import "./NeedsForm.css";
 
-const NeedsForm = ({items, setItems}) => {
+const NeedsForm = ({ items, setItems, neededItems, setNeededItems }) => {
   const allItems = items.map((item, index) => {
-    return <Item key={index + 1} id={index + 1} items={items} setItems={setItems} item={item}/>;
+    return <Item key={index} items={items} setItems={setItems} item={item} neededItems={neededItems} setNeededItems={setNeededItems} />;
   });
 
   return (

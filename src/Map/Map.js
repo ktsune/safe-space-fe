@@ -24,7 +24,6 @@ const Map = ({ selectCenter }) => {
   const [lat, updateLat] = useState(39.7392);
   const [lng, updateLng] = useState(-104.9903);
   const [zoom, updateZoom] = useState(13);
-
   const { loading, error, data } = useQuery(GET_CENTERS);
       
   if (loading) return 'Loading...';

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Item.css";
 
-const Item = ({ item, items, setItems, medication, removeMed}) => {
-  const [isNeeded, setIsNeeded] = useState(false);
+const Item = ({ item, items, setItems, neededItems, setNeededItems}) => {
   const [newItem, setNewItem] = useState("")
 
   const handleChange = e => setNewItem(e.target.value);
@@ -10,10 +9,19 @@ const Item = ({ item, items, setItems, medication, removeMed}) => {
   const handleSubmit = (e, newItem) => {
     e.preventDefault();
     items.splice(items.length - 1, 0, newItem)
-    setIsNeeded(true)
     setItems([...items])
+    setNeededItems([...neededItems, newItem])
   }
 
+  const handleCheck = (e) => {
+    if (!neededItems.includes(item)) {
+      setNeededItems([...neededItems, item]);
+    } else {
+      let filteredItems = neededItems.filter(itemName => itemName !== item);
+      setNeededItems(filteredItems)
+    }
+  }
+  
   return (
     <article className="Item">
       {item === "add item" ?
@@ -21,31 +29,26 @@ const Item = ({ item, items, setItems, medication, removeMed}) => {
           <input 
           id="new-item" 
           type="text" 
-          placeholder="Add Item" 
+          placeholder="Add Item/Medication" 
           name="name" 
           value={newItem} 
           onChange={handleChange} 
           />        
           <button type="submit" onClick={e => handleSubmit(e, newItem)}>+++</button>
         </div> 
-      : medication ?
-        <div id="medical-item-container">
-          <h3 id="medication-name">{medication}</h3>
-          <button id="remove-medication-button" onClick={e => removeMed(e, medication.id)}>X</button>
-        </div>
-      :
+      : 
         <div id="checkbox-item-container">
           <img
             id="check-or-uncheck"
             alt=""
             src={
-              !isNeeded
+              !neededItems.includes(item)
                 ? require("../assets/unchecked.svg")
                 : require("../assets/checked.svg")
             }
-            onClick={e => setIsNeeded(!isNeeded)}
+            onClick={handleCheck}
           />
-          <h3 id="item-name" onClick={e => setIsNeeded(!isNeeded)}>{item}</h3>
+          <h3 id="item-name" onClick={handleCheck}>{item}</h3>
         </div>
       }
     </article>

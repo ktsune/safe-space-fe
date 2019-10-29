@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './EmergencyContactForm.css'
 
-const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, setEmergencyPhone, emergencyRelationship, setEmergencyRelationship}) => {
+const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, setEmergencyPhone, emergencyRelationship, setEmergencyRelationship, sendMessage, setSendMessage}) => {
+
+  const toggleSendMessage = (e) => {
+    e.preventDefault()
+    setSendMessage(!sendMessage)
+  }
 
   return (
     <form className="EmergencyContactForm">
@@ -21,6 +26,8 @@ const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, 
        <label id="relationship-label" for="relationship">Relationship:</label>
        <input id="relationship" type='text' name='relationship' value={emergencyRelationship} placeholder="Add relationship" onChange={e => setEmergencyRelationship(e.target.value)}/> 
       </div>
+
+      <button onClick={e => toggleSendMessage(e)}>Click Me to Allow Text to Contact</button>
     </form>
   )
 }
