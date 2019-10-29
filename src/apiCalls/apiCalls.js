@@ -34,7 +34,7 @@ export const addItem = async (item, centerId) => {
     }
   };
 
-  let queryParams = `mutation {createItem(name: "${item.name}", quantity: ${item.quantity}, consumable: ${item.consumable}, centerId: ${centerId}) {item {id name quantity}}}`;
+  let queryParams = `mutation {createItem(name: "${item.name}", quantity: ${item.quantity}, consumable: ${item.consumable}, centerId: ${centerId}) {item {id name}}}`;
 
   let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
 
@@ -42,11 +42,12 @@ export const addItem = async (item, centerId) => {
     let resp = await fetch(url, options);
 
     if (!resp.ok) {
-      throw new Error("There was an adding that item");
+      throw new Error("There was an issue adding that item");
     }
 
     let data = await resp.json();
-    return data
+    console.log(data)
+    return data.data.createItem.item.id
   } catch (error) {
     throw error;
   }

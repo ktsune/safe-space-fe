@@ -95,8 +95,9 @@ const SuppliesForm = () => {
     }
     console.log(newItem)
     let response  = await addItem(newItem, reliefCenter.id)
+    let itemWithId = { ...newItem, id: response}
     console.log(response)
-    // setCurrentItems([...currentItems, newItem])
+    setCurrentItems([...currentItems, itemWithId])
   }
 
   const handleConsumable = () => {

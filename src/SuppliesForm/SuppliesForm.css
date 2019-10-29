@@ -47,3 +47,7 @@
 .consumable-check {
   height: 20px;
 }
+
+.SuppliesForm_section article {
+  overflow: scroll;
+}
