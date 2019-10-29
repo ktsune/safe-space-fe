@@ -14,3 +14,34 @@
   overflow-y: scroll;
 }
 
+hr {
+  width: 100%;
+  border: 1px solid white;
+}
+
+#submit-form-button-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-form-text {
+  width: 60%;
+  font-size: 15px;
+  text-align: center;
+}
+
+#submit-form-button {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: 50%;
+  height: 50px;
+  font-size: 30px;
+  align-self: center;
+  border-radius: 5px;
+  background-color: #782a30;
+  color: white;
+}
+
