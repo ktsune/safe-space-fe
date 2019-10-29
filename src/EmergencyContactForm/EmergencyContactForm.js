@@ -57,7 +57,7 @@ const EmergencyContactForm = ({
           type="text"
           name="relationship"
           value={emergencyRelationship}
-          placeholder="Add relationship"
+          placeholder="Add Relationship"
           onChange={e => setEmergencyRelationship(e.target.value)}
         />
       </div>

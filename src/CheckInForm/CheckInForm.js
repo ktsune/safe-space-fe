@@ -11,13 +11,13 @@ const CheckInForm = ({ reliefCenter }) => {
   const [personPhone, setPersonPhone] = useState("");
   const [neededItems, setNeededItems] = useState([])
   const [items, setItems] = useState([
-    "diapers",
-    "baby wipes",
-    "breastfeeding supplies",
-    "infant formula",
-    "feminine products",
-    "phone charger (iphone)",
-    "phone charger (android)",
+    "Diapers",
+    "Baby Wipes",
+    "Breastfeeding Supplies",
+    "Infant Formula",
+    "Feminine Products",
+    "Phone Charger (iphone)",
+    "Phone Charger (android)",
     "add item"
   ]);
 
