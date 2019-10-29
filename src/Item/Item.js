@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Item.css";
 
-const Item = ({ item, items, setItems}) => {
-  const [isNeeded, setIsNeeded] = useState(false);
+const Item = ({ item, items, setItems, neededItems, setNeededItems}) => {
   const [newItem, setNewItem] = useState("")
 
   const handleChange = e => setNewItem(e.target.value);
@@ -10,10 +9,19 @@ const Item = ({ item, items, setItems}) => {
   const handleSubmit = (e, newItem) => {
     e.preventDefault();
     items.splice(items.length - 1, 0, newItem)
-    setIsNeeded(true)
     setItems([...items])
+    setNeededItems([...neededItems, newItem])
   }
 
+  const handleCheck = (e) => {
+    if (!neededItems.includes(item)) {
+      setNeededItems([...neededItems, item]);
+    } else {
+      let filteredItems = neededItems.filter(itemName => itemName !== item);
+      setNeededItems(filteredItems)
+    }
+  }
+  
   return (
     <article className="Item">
       {item === "add item" ?
@@ -34,13 +42,13 @@ const Item = ({ item, items, setItems}) => {
             id="check-or-uncheck"
             alt=""
             src={
-              !isNeeded
+              !neededItems.includes(item)
                 ? require("../assets/unchecked.svg")
                 : require("../assets/checked.svg")
             }
-            onClick={e => setIsNeeded(!isNeeded)}
+            onClick={handleCheck}
           />
-          <h3 id="item-name" onClick={e => setIsNeeded(!isNeeded)}>{item}</h3>
+          <h3 id="item-name" onClick={handleCheck}>{item}</h3>
         </div>
       }
     </article>
