@@ -21,7 +21,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
       </article> 
     : 
     <article className="navigation-menu">
-          <button className="LogInForm_button-back" onClick={() => selectCenter(false)}>Back to Home</button>
+        <button className="LogInForm_button-back" onClick={() => selectCenter(false)}>Back to Home</button>
       <NavLink to="/supplies" className="Link" id="supplies-button" onClick={fetchItems}>
         <button id="supplies-button">Supplies</button>
       </NavLink>
