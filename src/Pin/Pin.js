@@ -40,12 +40,12 @@ export const Pin = ({ center, selectCenter }) => {
   } else {
     return(
       <div className='pin-hover' onMouseLeave={handleHover}>
-        <h3>{reliefCenter.name}</h3>
-        <p>{reliefCenter.addressPrint}</p>
-        <p>{reliefCenter.website}</p>
-        <p>{reliefCenter.email}</p>
-        <p>{reliefCenter.phone}</p>
-        <button onClick={handleSelectCenter}>Go to Center!</button>
+        <img className="relief-center-img" src={'https://oceanservice.noaa.gov/hazards/drc/drc.jpg'} alt="hello"/>
+        <div>
+          <h4 onClick={handleSelectCenter}>{reliefCenter.name}</h4>
+          <p>Phone: 720-521-1234</p>
+          <p>Capacity: 175/250 people</p>
+        </div>
       </div>
     )
   }
