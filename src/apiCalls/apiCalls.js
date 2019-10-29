@@ -50,9 +50,7 @@ export const patchItem = async (item, reliefCenter) => {
   }
 };
 
-export const postNewUser = async (personData, center) => {
-  console.log(personData);
-  console.log(center);
+export const postNewUser = async (personData, center) => { 
   let options = {
     method: "POST",
     headers: {
@@ -61,7 +59,6 @@ export const postNewUser = async (personData, center) => {
   };
 
   let queryParams = `mutation {createUser (name: "${personData.name}", age: "${personData.age}", phone: "${personData.phone}", centerId: ${center.id}) {user {id}}}`;
-  console.log(queryParams);
   let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
 
   try {
@@ -72,17 +69,13 @@ export const postNewUser = async (personData, center) => {
     }
 
     let data = await resp.json();
-    console.log(data.data.createUser.user.id);
     return data.data.createUser.user.id;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 };
 
 export const postEmergencyContacts = async (userId, personData) => {
-  console.log(userId);
-  console.log(personData);
   let options = {
     method: "POST",
     headers: {
@@ -90,8 +83,7 @@ export const postEmergencyContacts = async (userId, personData) => {
     }
   };
 
-  let queryParams = `mutation {createContact (name: "${personData.emergencyName}", phone: "${personData.emergencyPhone}" userId: ${userId}) {contact {id name phone userId}}}`;
-  console.log(queryParams);
+  let queryParams = `mutation {createContact (name: "${personData.emergencyName}", phone: "${personData.emergencyPhone}", userId: ${userId}, notify: ${personData.notify}) {contact {id name phone userId}}}`;
   let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
 
   try {
@@ -102,15 +94,13 @@ export const postEmergencyContacts = async (userId, personData) => {
     }
 
     let data = await resp.json();
-    return data.data.createContact.contact.id;
+    return data
   } catch (error) {
     throw error;
   }
 };
 
 export const postNeeds = async (userId, needs) => {
-  console.log(userId);
-  console.log(needs);
   let options = {
     method: "POST",
     headers: {
@@ -120,7 +110,6 @@ export const postNeeds = async (userId, needs) => {
 
   needs.map(async need => {
     let queryParams = `mutation {createNeed (name: "${need}" userId: ${userId}) {need {id name userId}}}`;
-    console.log(queryParams);
     let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
 
     try {
@@ -131,7 +120,6 @@ export const postNeeds = async (userId, needs) => {
       }
   
       let data = await resp.json();
-      console.log('needs', data)
       return data;
     } catch (error) {
       throw error;

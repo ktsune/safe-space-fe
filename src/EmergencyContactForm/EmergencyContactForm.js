@@ -3,6 +3,11 @@ import './EmergencyContactForm.css'
 
 const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, setEmergencyPhone, emergencyRelationship, setEmergencyRelationship, sendMessage, setSendMessage}) => {
 
+  const toggleSendMessage = (e) => {
+    e.preventDefault()
+    setSendMessage(!sendMessage)
+  }
+
   return (
     <form className="EmergencyContactForm">
       <h1 id="emergency-contact-info-header">Emergency Contact Information:</h1>
@@ -22,8 +27,7 @@ const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, 
        <input id="relationship" type='text' name='relationship' value={emergencyRelationship} placeholder="Add relationship" onChange={e => setEmergencyRelationship(e.target.value)}/> 
       </div>
 
-      <button onClick={setSendMessage(!sendMessage)}>Click Me to Allow Text to Contact</button>
-
+      <button onClick={e => toggleSendMessage(e)}>Click Me to Allow Text to Contact</button>
     </form>
   )
 }

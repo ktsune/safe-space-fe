@@ -34,11 +34,12 @@ const CheckInForm = ({ reliefCenter }) => {
       needs: items,
       emergencyName: emergencyName,
       emergencyPhone: emergencyPhone,
-      emergencyRelationship: emergencyRelationship
+      emergencyRelationship: emergencyRelationship,
+      notify: sendMessage
     };
     let userId = await postNewUser(personData, reliefCenter);
 
-    await postNeeds(userId, ['insulin', 'wheelchair'])
+    await postNeeds(userId, [])
     await postEmergencyContacts(userId, personData)
   };
 
@@ -60,6 +61,8 @@ const CheckInForm = ({ reliefCenter }) => {
         setEmergencyPhone={setEmergencyPhone}
         emergencyRelationship={emergencyRelationship}
         setEmergencyRelationship={setEmergencyRelationship}
+        sendMessage={sendMessage}
+        setSendMessage={setSendMessage}
       />
         <button id="submit" onClick={submitUser}>Submit</button>
     </section>
