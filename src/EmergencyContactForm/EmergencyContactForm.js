@@ -13,17 +13,17 @@ const EmergencyContactForm = ({emergencyName, setEmergencyName, emergencyPhone, 
       <h1 id="emergency-contact-info-header">Emergency Contact Information:</h1>
 
       <div id='field'> 
-       <label id="fullname-label" for="Full Name">Full Name:</label>
+       <label id="fullname-label" htmlFor="Full Name">Full Name:</label>
        <input id="fullname" type="text" name='name' value={emergencyName} placeholder="Add Full Name" onChange={e => setEmergencyName(e.target.value)}/>
       </div>
 
       <div id='field'> 
-        <label id="phone-label" for="phone">Phone:</label>
+        <label id="phone-label" htmlFor="phone">Phone:</label>
         <input id="phone" type='text' name='phone' value={emergencyPhone} placeholder="Add Phone Number" onChange={e => setEmergencyPhone(e.target.value)}/>
       </div>
 
       <div id='field'> 
-       <label id="relationship-label" for="relationship">Relationship:</label>
+       <label id="relationship-label" htmlFor="relationship">Relationship:</label>
        <input id="relationship" type='text' name='relationship' value={emergencyRelationship} placeholder="Add relationship" onChange={e => setEmergencyRelationship(e.target.value)}/> 
       </div>
 
