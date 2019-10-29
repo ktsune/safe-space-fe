@@ -13,7 +13,6 @@ import { CurrentCenterContext } from '../Contexts/CurrentCenterContext';
 import { UsersContext } from '../Contexts/UsersContext';
 import { ItemsContext } from '../Contexts/ItemsContext';
 
-
 const client = new ApolloClient({
   uri: 'https://safe-space-be.herokuapp.com/graphql',
 });
@@ -29,7 +28,6 @@ const App = () => {
   const users = useMemo(() => ({ currentUsers, setCurrentUsers }), [currentUsers, setCurrentUsers]);
   const items = useMemo(() => ({ currentItems, setCurrentItems }), [currentItems, setCurrentItems]);
 
-
   return (
     <ApolloProvider client={client}>
       <section className="App">
@@ -41,12 +39,12 @@ const App = () => {
                 {isLoading ? (
                   <SplashPage />
                   ) : (
-                    <LogInForm
-                    selectCenter={selectCenter}
-                    isCenterSelected={isCenterSelected}
-                    reliefCenter={reliefCenter}
-                    />
-                    )}
+                  <LogInForm
+                  selectCenter={selectCenter}
+                  isCenterSelected={isCenterSelected}
+                  reliefCenter={reliefCenter}
+                  />
+                  )}
               </Route>
               <Route exact path='/supplies' component={SuppliesForm} />
               <Route exact path="/check-in" component={CheckInForm} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 
-const Header = () => {
+export const Header = () => {
   return (
     <section className="Header">
       <img alt="lotus-flower" id="lotus-header" src={require('../assets/lotus-flower.svg')}/>
