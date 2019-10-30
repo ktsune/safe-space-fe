@@ -1,5 +1,11 @@
-# Production & Codebase
+# README
+# Safe Space
 
+Safe Space is a disaster relief app that is used to check in disaster survivors, and keep an up-to-date status of the disaster relief center (number of people at the center, inventory of supplies, and list of top necessities, for example water, blankets, food, etc.)
+
+## Production & Codebase
+
+You can view the Github repos as well as see the app in production here:
 
 [Front end GitHub](https://github.com/ktsune/safe-space-fe)
 
@@ -9,69 +15,69 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### You can also view the project board here:
+https://github.com/ktsune/safe-space-fe/projects/1
 
-In the project directory, you can run:
+## Setup Instructions
 
-### `npm start`
+#### How to setup:
+    Clone the repo:
+    $ git clone git@github.com:ktsune/express_sweater_weather.git
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    Install npm:
+    $ npm install
+#### Run tests:
+    Run all tests:
+    $ npm test
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## User Interface
 
-### `npm test`
+<a href="https://cl.ly/6cd898a4d513" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/3P0L090A1t3S1j1O1y1N/Screen%20Shot%202019-10-30%20at%203.37.00%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://cl.ly/ed057425b142" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/2j3x113Q3I1l0C2u2Y01/Screen%20Shot%202019-10-30%20at%203.38.25%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-### `npm run build`
+<a href="https://cl.ly/575f13499fba" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/2P410r0q3I3o3v092Y21/Screen%20Shot%202019-10-30%20at%203.39.12%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="https://cl.ly/cdfe81dc3197" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/0B0y0e1l3l232K3z370y/Screen%20Shot%202019-10-30%20at%203.39.55%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Wireframe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="https://cl.ly/71668a7578ce" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/0U2M0j3S0k3P1S3R1R2J/Screen%20Shot%202019-10-30%20at%203.27.34%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-### `npm run eject`
+<a href="https://cl.ly/3dc4520a5179" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/1g0p2g31070Q1p1C343N/Screen%20Shot%202019-10-30%20at%203.27.20%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Start the Server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How to Contribute
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you'd like to contribute to this project, feel free to make a pull request at:
 
-## Learn More
+https://github.com/Jake0Miller/safe-space-be/compare
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+and click on `New Pull Request`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributors
 
-### Code Splitting
+- Ann Cerveny
+- Jacob Bogart
+- Jake Miller
+- Sarah Tatro
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Tech Stack List
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- React
+- Redux
+- GraphQL
+- JavaScript (ES6+)
+- SASS/SCSS
+- HTML5
+- Node
+- SQL
+- Express
+- Knex
+- PostgreSQL
+- Testing with Jest & Enzyme
