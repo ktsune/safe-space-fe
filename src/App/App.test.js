@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { mount } from 'enzyme';
-import App from './App';
+import { App } from './App';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -21,4 +21,8 @@ describe('App', () => {
   it('should render without crashing', () => {
     expect(wrapper.length).toEqual(1)
   });
+
+  it('should match the snapshot with the data passed through', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
 });
