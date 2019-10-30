@@ -100,7 +100,7 @@ const CheckInForm = ({ reliefCenter }) => {
           knowledge.
         </h3>
         <button disabled={!personName || !personAge}id="submit-form-button" onClick={submitUser}>Submit Form</button>
-        <p><span className="required-asterisk">* Required Field</span></p>
+        {(!personName || !personAge) && <p><span className="required-asterisk">* Required Field</span></p>}
       </div>
     </section>
     :
