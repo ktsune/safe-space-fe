@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import BasicInfoForm from "../BasicInfoForm/BasicInfoForm";
 import NeedsForm from "../NeedsForm/NeedsForm";
 import EmergencyContactForm from "../EmergencyContactForm/EmergencyContactForm";
 import { postNewUser, postNeeds, postEmergencyContacts } from "../apiCalls/apiCalls";
+import { UsersContext } from '../Contexts/UsersContext';
 import "./CheckInForm.css";
 
 const CheckInForm = ({ reliefCenter }) => {
+  const { currentUsers, setCurrentUsers } = useContext(UsersContext)
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [personPhone, setPersonPhone] = useState("");
@@ -39,7 +41,10 @@ const CheckInForm = ({ reliefCenter }) => {
       notify: sendMessage
     };
     let userId = await postNewUser(personData, reliefCenter);
-
+    let newUser = { id: userId, name: personName, __typename: "User" }
+    setCurrentUsers({ 
+      result: [...currentUsers.result, newUser], original: [...currentUsers.result, newUser] 
+    })
     await postNeeds(userId, neededItems)
     await postEmergencyContacts(userId, personData)
   };

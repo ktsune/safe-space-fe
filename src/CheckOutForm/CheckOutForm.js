@@ -10,7 +10,6 @@ const CheckOutForm = () => {
   const deleteUser = async (id) => {
     await deleteUserFromDB(id);
     let filteredUsers = currentUsers.original.filter(person => person.id != id)
-    console.log(filteredUsers)
     setCurrentUsers({ result: filteredUsers, original: filteredUsers })
   }
 
