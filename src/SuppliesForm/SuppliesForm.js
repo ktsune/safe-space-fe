@@ -114,15 +114,22 @@ const SuppliesForm = () => {
           <p className="quantity-amount">{item.quantity}</p>
           <button onClick={() => updateQuantity(item.id, 'increment')}>+</button>
         </div>
-        <div>
+        <div id="add-quantity-input-container">
           <input 
             className="quantity_input"
             type="number"
             name="quantityInput"
             placeholder="Enter a value..."
             onChange={(e) => handleQuantityInput(e, item)} />
-        </div>
-      </div>  
+        </div> 
+      </div>
+      <button id="deleteItem-button">
+            <img
+              id="deleteItem-img"
+              alt="circle with an x inside"
+              src={require("../assets/delete-button.svg")}
+            />
+        </button> 
       { hasBeenEdited(item.id) && <button className="itemsList_save-changes" onClick={() => saveChanges(item)}>Save Changes</button> }
     </section>
   })
