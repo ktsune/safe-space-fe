@@ -24,7 +24,37 @@ export const getItems = async reliefCenter => {
   }
 };
 
+export const addItem = async (item, centerId) => {
+  console.log(item)
+  console.log(centerId)
+  let options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  let queryParams = `mutation {createItem(name: "${item.name}", quantity: ${item.quantity}, consumable: ${item.consumable}, centerId: ${centerId}) {item {id name}}}`;
+
+  let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`;
+
+  try {
+    let resp = await fetch(url, options);
+
+    if (!resp.ok) {
+      throw new Error("There was an issue adding that item");
+    }
+
+    let data = await resp.json();
+    console.log(data)
+    return data.data.createItem.item.id
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const patchItem = async (item, reliefCenter) => {
+  console.log(item)
   let options = {
     method: "POST",
     headers: {
@@ -124,6 +154,32 @@ export const postNeeds = async (userId, needs) => {
     } catch (error) {
       throw error;
     }
-
   })
 };
+
+export const deleteUserFromDB = async (id) => {
+  console.log(typeof parseInt(id))
+  let options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  let queryParams = `mutation {deleteUser(id: ${id}) {user {id name}}}`
+
+  let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`
+
+  try {
+    let resp = await fetch(url, options);
+
+    if (!resp.ok) {
+      throw new Error('There was an error deleting the user')
+    }
+    let data = await resp.json();
+    return data
+
+  } catch (error) {
+    throw error
+  }
+}  

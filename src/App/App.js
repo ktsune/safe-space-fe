@@ -17,7 +17,7 @@ const client = new ApolloClient({
   uri: 'https://safe-space-be.herokuapp.com/graphql',
 });
 
-const App = () => {
+export const App = () => {
   const [reliefCenter, setreliefCenter] = useState('');
   const [currentUsers, setCurrentUsers] = useState({ result: [], original: [] })
   const [currentItems, setCurrentItems] = useState([]);

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import BasicInfoForm from "../BasicInfoForm/BasicInfoForm";
 import NeedsForm from "../NeedsForm/NeedsForm";
 import EmergencyContactForm from "../EmergencyContactForm/EmergencyContactForm";
-import {
-  postNewUser,
-  postNeeds,
-  postEmergencyContacts
-} from "../apiCalls/apiCalls";
+import { postNewUser, postNeeds, postEmergencyContacts } from "../apiCalls/apiCalls";
+import { UsersContext } from '../Contexts/UsersContext';
+import { NavLink } from "react-router-dom";
 import "./CheckInForm.css";
 
 const CheckInForm = ({ reliefCenter }) => {
+  const { currentUsers, setCurrentUsers } = useContext(UsersContext)
+  const [isUserSubmitted, setSubmittedStatus] = useState(false)
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [personPhone, setPersonPhone] = useState("");
@@ -43,12 +43,18 @@ const CheckInForm = ({ reliefCenter }) => {
       notify: sendMessage
     };
     let userId = await postNewUser(personData, reliefCenter);
-
-    await postNeeds(userId, neededItems);
-    await postEmergencyContacts(userId, personData);
+    let newUser = { id: userId, name: personName, __typename: "User" }
+    setCurrentUsers({ 
+      result: [...currentUsers.result, newUser], 
+      original: [...currentUsers.result, newUser] 
+    })
+    await postNeeds(userId, neededItems)
+    await postEmergencyContacts(userId, personData)
+    setSubmittedStatus(true)
   };
 
   return (
+    !isUserSubmitted ?
     <section className="CheckInForm">
       <BasicInfoForm
         personName={personName}
@@ -85,6 +91,14 @@ const CheckInForm = ({ reliefCenter }) => {
           Submit Form
         </button>
       </div>
+    </section>
+    :
+    <section className="CheckInForm-successful-checkin">
+      <p>You successfully checked in!</p>
+      <button className="button_successful-checkin"onClick={() => setSubmittedStatus(false)}>Go to Check-In</button>
+      <NavLink to="/">
+        <button className="button_successful-checkin">Go to Main Menu</button>
+      </NavLink>
     </section>
   );
 };

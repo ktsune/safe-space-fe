@@ -14,6 +14,30 @@
   overflow-y: scroll;
 }
 
+.CheckInForm-successful-checkin {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.CheckInForm-successful-checkin p {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+.button_successful-checkin {
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #782a30;
+  color: white;
+}
+
 hr {
   width: 100%;
   border: 1px solid white;
@@ -44,4 +68,3 @@ hr {
   background-color: #782a30;
   color: white;
 }
-
