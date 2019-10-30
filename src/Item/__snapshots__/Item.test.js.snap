@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should match the snapshot with three empty name, age, and phone inputs passed through 1`] = `
+<article
+  className="Item"
+>
+  <div
+    id="checkbox-item-container"
+  >
+    <img
+      alt=""
+      id="check-or-uncheck"
+      onClick={[Function]}
+      src={
+        Object {
+          "ReactComponent": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+          "__esModule": true,
+          "default": "unchecked.svg",
+        }
+      }
+    />
+    <h3
+      id="item-name"
+      onClick={[Function]}
+    />
+  </div>
+</article>
+`;

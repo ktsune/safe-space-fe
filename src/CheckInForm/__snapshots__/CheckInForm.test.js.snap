@@ -1,0 +1,629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckInForm should match the snapshot 1`] = `
+<CheckInForm
+  reliefCenter={
+    Object {
+      "addressPrint": "1331 17th St Denver CO 80202",
+      "id": "1",
+      "lat": "39.7508132",
+      "lng": "-104.9967997",
+      "name": "Turing Relief Center",
+      "phone": "5555555555",
+      "website": "www.relief-center.com",
+    }
+  }
+>
+  <section
+    className="CheckInForm"
+  >
+    <BasicInfoForm
+      personAge=""
+      personName=""
+      personPhone=""
+      setPersonAge={[Function]}
+      setPersonName={[Function]}
+      setPersonPhone={[Function]}
+    >
+      <form
+        className="BasicInfoForm"
+      >
+        <h1
+          id="basic-info-header"
+        >
+          Basic Information:
+        </h1>
+        <div
+          id="fullname-container"
+        >
+          <label
+            htmlFor="fullname"
+            id="fullname-label"
+          >
+            Full Name:
+          </label>
+          <input
+            id="fullname"
+            name="name"
+            onChange={[Function]}
+            placeholder="Add Full Name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          id="age-container"
+        >
+          <label
+            htmlFor="age"
+            id="age-label"
+          >
+            Age:
+          </label>
+          <input
+            id="age"
+            name="age"
+            onChange={[Function]}
+            placeholder="Add Age"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          id="phone-container"
+        >
+          <label
+            htmlFor="phone"
+            id="phone-label"
+          >
+            Phone Number:
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            onChange={[Function]}
+            placeholder="Add Phone Number"
+            type="text"
+            value=""
+          />
+        </div>
+      </form>
+    </BasicInfoForm>
+    <NeedsForm
+      items={
+        Array [
+          "Diapers",
+          "Baby Wipes",
+          "Breastfeeding Supplies",
+          "Infant Formula",
+          "Feminine Products",
+          "Phone Charger (iphone)",
+          "Phone Charger (android)",
+          "add item",
+        ]
+      }
+      neededItems={Array []}
+      setItems={[Function]}
+      setNeededItems={[Function]}
+    >
+      <section
+        className="NeedsForm"
+      >
+        <h1
+          id="necessities-header"
+        >
+          Necessities:
+        </h1>
+        <article
+          id="items-container"
+        >
+          <Item
+            item="Diapers"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="0"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Diapers
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Baby Wipes"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="1"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Baby Wipes
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Breastfeeding Supplies"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="2"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Breastfeeding Supplies
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Infant Formula"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="3"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Infant Formula
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Feminine Products"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="4"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Feminine Products
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Phone Charger (iphone)"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="5"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Phone Charger (iphone)
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="Phone Charger (android)"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="6"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="checkbox-item-container"
+              >
+                <img
+                  alt=""
+                  id="check-or-uncheck"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "unchecked.svg",
+                    }
+                  }
+                />
+                <h3
+                  id="item-name"
+                  onClick={[Function]}
+                >
+                  Phone Charger (android)
+                </h3>
+              </div>
+            </article>
+          </Item>
+          <Item
+            item="add item"
+            items={
+              Array [
+                "Diapers",
+                "Baby Wipes",
+                "Breastfeeding Supplies",
+                "Infant Formula",
+                "Feminine Products",
+                "Phone Charger (iphone)",
+                "Phone Charger (android)",
+                "add item",
+              ]
+            }
+            key="7"
+            neededItems={Array []}
+            setItems={[Function]}
+            setNeededItems={[Function]}
+          >
+            <article
+              className="Item"
+            >
+              <div
+                id="add-item-container"
+              >
+                <input
+                  id="new-item"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="Add Item/Medication"
+                  type="text"
+                  value=""
+                />
+                <button
+                  id="submit-new-item"
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  <img
+                    alt="plus symbol"
+                    id="plus-img"
+                    src={
+                      Object {
+                        "ReactComponent": Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        },
+                        "__esModule": true,
+                        "default": "plus-sign.svg",
+                      }
+                    }
+                  />
+                </button>
+              </div>
+            </article>
+          </Item>
+        </article>
+      </section>
+    </NeedsForm>
+    <EmergencyContactForm
+      emergencyName=""
+      emergencyPhone=""
+      emergencyRelationship=""
+      sendMessage={false}
+      setEmergencyName={[Function]}
+      setEmergencyPhone={[Function]}
+      setEmergencyRelationship={[Function]}
+      setSendMessage={[Function]}
+    >
+      <form
+        className="EmergencyContactForm"
+      >
+        <h1
+          id="emergency-contact-info-header"
+        >
+          Emergency Contact Information:
+        </h1>
+        <div
+          id="field"
+        >
+          <label
+            htmlFor="Full Name"
+            id="fullname-label"
+          >
+            Full Name:
+          </label>
+          <input
+            id="fullname"
+            name="name"
+            onChange={[Function]}
+            placeholder="Add Full Name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          id="field"
+        >
+          <label
+            htmlFor="phone"
+            id="phone-label"
+          >
+            Phone:
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            onChange={[Function]}
+            placeholder="Add Phone Number"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          id="field"
+        >
+          <label
+            htmlFor="relationship"
+            id="relationship-label"
+          >
+            Relationship:
+          </label>
+          <input
+            id="relationship"
+            name="relationship"
+            onChange={[Function]}
+            placeholder="Add Relationship"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          id="make-public-or-private-container"
+        >
+          <h3
+            id="public-or-private-button-text"
+          >
+            By clicking the following button, I agree to allow a message to be sent to the emergency contact number listed above.
+          </h3>
+          <button
+            id="make-public-or-private-button"
+            onClick={[Function]}
+          >
+            Send Text to Contact
+          </button>
+        </div>
+      </form>
+    </EmergencyContactForm>
+    <hr />
+    <div
+      id="submit-form-button-container"
+    >
+      <h3
+        id="submit-form-text"
+      >
+        By clicking the "Submit Form" button below, I certify that all information in this form is true and correct to the best of my knowledge.
+      </h3>
+      <button
+        id="submit-form-button"
+        onClick={[Function]}
+      >
+        Submit Form
+      </button>
+    </div>
+  </section>
+</CheckInForm>
+`;

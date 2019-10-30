@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmergencyContactForm should match the snapshot with three empty name, age, and phone inputs passed through 1`] = `
+<form
+  className="EmergencyContactForm"
+>
+  <h1
+    id="emergency-contact-info-header"
+  >
+    Emergency Contact Information:
+  </h1>
+  <div
+    id="field"
+  >
+    <label
+      htmlFor="Full Name"
+      id="fullname-label"
+    >
+      Full Name:
+    </label>
+    <input
+      id="fullname"
+      name="name"
+      onChange={[Function]}
+      placeholder="Add Full Name"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    id="field"
+  >
+    <label
+      htmlFor="phone"
+      id="phone-label"
+    >
+      Phone:
+    </label>
+    <input
+      id="phone"
+      name="phone"
+      onChange={[Function]}
+      placeholder="Add Phone Number"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    id="field"
+  >
+    <label
+      htmlFor="relationship"
+      id="relationship-label"
+    >
+      Relationship:
+    </label>
+    <input
+      id="relationship"
+      name="relationship"
+      onChange={[Function]}
+      placeholder="Add Relationship"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    id="make-public-or-private-container"
+  >
+    <h3
+      id="public-or-private-button-text"
+    >
+      By clicking the following button, I agree to allow a message to be sent to the emergency contact number listed above.
+    </h3>
+    <button
+      id="make-public-or-private-button"
+      onClick={[Function]}
+    >
+      Send Text to Contact
+    </button>
+  </div>
+</form>
+`;

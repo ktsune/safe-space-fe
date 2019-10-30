@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicInfoForm should match the snapshot with three empty name, age, and phone inputs passed through 1`] = `
+<form
+  className="BasicInfoForm"
+>
+  <h1
+    id="basic-info-header"
+  >
+    Basic Information:
+  </h1>
+  <div
+    id="fullname-container"
+  >
+    <label
+      htmlFor="fullname"
+      id="fullname-label"
+    >
+      Full Name:
+    </label>
+    <input
+      id="fullname"
+      name="name"
+      onChange={[Function]}
+      placeholder="Add Full Name"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    id="age-container"
+  >
+    <label
+      htmlFor="age"
+      id="age-label"
+    >
+      Age:
+    </label>
+    <input
+      id="age"
+      name="age"
+      onChange={[Function]}
+      placeholder="Add Age"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    id="phone-container"
+  >
+    <label
+      htmlFor="phone"
+      id="phone-label"
+    >
+      Phone Number:
+    </label>
+    <input
+      id="phone"
+      name="phone"
+      onChange={[Function]}
+      placeholder="Add Phone Number"
+      type="text"
+      value=""
+    />
+  </div>
+</form>
+`;

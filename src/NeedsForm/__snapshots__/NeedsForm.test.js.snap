@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NeedsForm should match the snapshot 1`] = `
+<NeedsForm
+  items={
+    Array [
+      "Diapers",
+      "Baby Wipes",
+      "Breastfeeding Supplies",
+      "Infant Formula",
+      "Feminine Products",
+      "Phone Charger (iphone)",
+      "Phone Charger (android)",
+      "add item",
+    ]
+  }
+  neededItems={Array []}
+  setItems={[MockFunction]}
+  setNeededItems={[MockFunction]}
+>
+  <section
+    className="NeedsForm"
+  >
+    <h1
+      id="necessities-header"
+    >
+      Necessities:
+    </h1>
+    <article
+      id="items-container"
+    >
+      <Item
+        item="Diapers"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="0"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Diapers
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Baby Wipes"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="1"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Baby Wipes
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Breastfeeding Supplies"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="2"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Breastfeeding Supplies
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Infant Formula"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="3"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Infant Formula
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Feminine Products"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="4"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Feminine Products
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Phone Charger (iphone)"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="5"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Phone Charger (iphone)
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="Phone Charger (android)"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="6"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="checkbox-item-container"
+          >
+            <img
+              alt=""
+              id="check-or-uncheck"
+              onClick={[Function]}
+              src={
+                Object {
+                  "ReactComponent": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
+                  "__esModule": true,
+                  "default": "unchecked.svg",
+                }
+              }
+            />
+            <h3
+              id="item-name"
+              onClick={[Function]}
+            >
+              Phone Charger (android)
+            </h3>
+          </div>
+        </article>
+      </Item>
+      <Item
+        item="add item"
+        items={
+          Array [
+            "Diapers",
+            "Baby Wipes",
+            "Breastfeeding Supplies",
+            "Infant Formula",
+            "Feminine Products",
+            "Phone Charger (iphone)",
+            "Phone Charger (android)",
+            "add item",
+          ]
+        }
+        key="7"
+        neededItems={Array []}
+        setItems={[MockFunction]}
+        setNeededItems={[MockFunction]}
+      >
+        <article
+          className="Item"
+        >
+          <div
+            id="add-item-container"
+          >
+            <input
+              id="new-item"
+              name="name"
+              onChange={[Function]}
+              placeholder="Add Item/Medication"
+              type="text"
+              value=""
+            />
+            <button
+              id="submit-new-item"
+              onClick={[Function]}
+              type="submit"
+            >
+              <img
+                alt="plus symbol"
+                id="plus-img"
+                src={
+                  Object {
+                    "ReactComponent": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
+                    "__esModule": true,
+                    "default": "plus-sign.svg",
+                  }
+                }
+              />
+            </button>
+          </div>
+        </article>
+      </Item>
+    </article>
+  </section>
+</NeedsForm>
+`;
