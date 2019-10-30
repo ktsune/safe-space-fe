@@ -8,11 +8,11 @@ const BasicInfoForm = ({personName, setPersonName, personAge, setPersonAge, pers
       <h1 id="basic-info-header">Basic Information:</h1>
       <div id="fullname-container">
         <label id="fullname-label" htmlFor="fullname">Full Name:</label>
-        <input id="fullname" type="text" placeholder="Add Full Name" onChange={e => setPersonName(e.target.value)} name="name" value={personName}/>
+        <input id="fullname" type="text" placeholder="Add Full Name" onChange={e => setPersonName(e.target.value)} name="name" value={personName} />
       </div>
       <div id="age-container">
         <label id="age-label" htmlFor="age">Age:</label>
-        <input id="age" type='text' placeholder="Add Age" onChange={e => setPersonAge(e.target.value)} name="age" value={personAge}/>
+        <input id="age" type='text' placeholder="Add Age" onChange={e => setPersonAge(e.target.value)} name="age" value={personAge} />
       </div>
       <div id="phone-container">
         <label id="phone-label" htmlFor="phone">Phone Number:</label>

@@ -18,7 +18,7 @@ exports[`App should match the snapshot with the data passed through 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "b1kxmx",
+            "key": "0huotd",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,7 @@ exports[`App should match the snapshot with the data passed through 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "b1kxmx",
+          "key": "0huotd",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -5325,6 +5325,11 @@ exports[`App should match the snapshot with the data passed through 1`] = `
                 <article
                   className="pick-relief-center-menu"
                 >
+                  <h2
+                    id="login-form-instructions"
+                  >
+                    Please select the location of the relief center for which you are currently stationed.
+                  </h2>
                   <Map
                     selectCenter={[Function]}
                   >
