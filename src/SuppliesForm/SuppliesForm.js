@@ -119,8 +119,7 @@ const SuppliesForm = () => {
             type="number"
             name="quantityInput"
             placeholder="Enter a value..."
-            onChange={(e) => handleQuantityInput(e, item)}
-            />
+            onChange={(e) => handleQuantityInput(e, item)} />
         </div>
       </div>  
       { hasBeenEdited(item.id) && <button className="itemsList_save-changes" onClick={() => saveChanges(item)}>Save Changes</button> }
@@ -142,8 +141,7 @@ const SuppliesForm = () => {
             placeholder="Enter item name..."
             value={itemToAdd}
             onChange={handleAddItem}
-            autoComplete="off"
-          />
+            autoComplete="off" />
         </label>
         <label>Is the item consumable:
           <img
@@ -157,7 +155,7 @@ const SuppliesForm = () => {
             onClick={handleConsumable}
           />
         </label>
-        <button onClick={submitNewItem}>Add Item</button>
+        <button disabled={!itemToAdd} onClick={submitNewItem}>Add Item</button>
       </form>
     </section>
   )
