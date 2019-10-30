@@ -7,11 +7,11 @@ const BasicInfoForm = ({personName, setPersonName, personAge, setPersonAge, pers
     <form className="BasicInfoForm">
       <h1 id="basic-info-header">Basic Information:</h1>
       <div id="fullname-container">
-        <label id="fullname-label" htmlFor="fullname">Full Name:</label>
+        <label id="fullname-label" htmlFor="fullname">Full Name: <span className="required-asterisk">*</span></label>
         <input id="fullname" type="text" placeholder="Add Full Name" onChange={e => setPersonName(e.target.value)} name="name" value={personName} />
       </div>
       <div id="age-container">
-        <label id="age-label" htmlFor="age">Age:</label>
+        <label id="age-label" htmlFor="age">Age: <span className="required-asterisk">*</span></label>
         <input id="age" type='text' placeholder="Add Age" onChange={e => setPersonAge(e.target.value)} name="age" value={personAge} />
       </div>
       <div id="phone-container">

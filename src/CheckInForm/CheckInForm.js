@@ -87,9 +87,8 @@ const CheckInForm = ({ reliefCenter }) => {
           information in this form is true and correct to the best of my
           knowledge.
         </h3>
-        <button id="submit-form-button" onClick={submitUser}>
-          Submit Form
-        </button>
+        <button disabled={!personName || !personAge}id="submit-form-button" onClick={submitUser}>Submit Form</button>
+        <p><span className="required-asterisk">* Required Field</span></p>
       </div>
     </section>
     :
