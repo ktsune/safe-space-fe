@@ -41,8 +41,8 @@ export const Pin = ({ center, selectCenter }) => {
     return(
       <div className='pin-hover' onMouseLeave={handleHover}>
         <img className="relief-center-img" src={'https://oceanservice.noaa.gov/hazards/drc/drc.jpg'} alt="hello"/>
-        <div>
-          <h4 onClick={handleSelectCenter}>{reliefCenter.name}</h4>
+        <div onClick={handleSelectCenter}>
+          <p className="pin-title">{reliefCenter.name}</p>
           <p>Phone: 720-521-1234</p>
           <p>Capacity: 175/250 people</p>
         </div>
