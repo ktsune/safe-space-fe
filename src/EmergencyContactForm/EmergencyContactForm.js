@@ -30,6 +30,7 @@ const EmergencyContactForm = ({
           value={emergencyName}
           placeholder="Add Full Name"
           onChange={e => setEmergencyName(e.target.value)}
+          autoComplete="off"
         />
       </div>
       <div id="field">
@@ -43,6 +44,7 @@ const EmergencyContactForm = ({
           value={emergencyPhone}
           placeholder="Add Phone Number"
           onChange={e => setEmergencyPhone(e.target.value)}
+          autoComplete="off"
         />
       </div>
       <div id="field">
@@ -56,6 +58,7 @@ const EmergencyContactForm = ({
           value={emergencyRelationship}
           placeholder="Add Relationship"
           onChange={e => setEmergencyRelationship(e.target.value)}
+          autoComplete="off"
         />
       </div>
 

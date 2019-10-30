@@ -8,15 +8,15 @@ const BasicInfoForm = ({personName, setPersonName, personAge, setPersonAge, pers
       <h1 id="basic-info-header">Basic Information:</h1>
       <div id="fullname-container">
         <label id="fullname-label" htmlFor="fullname">Full Name: <span className="required-asterisk">*</span></label>
-        <input id="fullname" type="text" placeholder="Add Full Name" onChange={e => setPersonName(e.target.value)} name="name" value={personName} />
+        <input id="fullname" type="text" placeholder="Add Full Name" onChange={e => setPersonName(e.target.value)} name="name" value={personName} autoComplete="off"/>
       </div>
       <div id="age-container">
         <label id="age-label" htmlFor="age">Age: <span className="required-asterisk">*</span></label>
-        <input id="age" type='text' placeholder="Add Age" onChange={e => setPersonAge(e.target.value)} name="age" value={personAge} />
+        <input id="age" type='text' placeholder="Add Age" onChange={e => setPersonAge(e.target.value)} name="age" value={personAge} autoComplete="off" />
       </div>
       <div id="phone-container">
         <label id="phone-label" htmlFor="phone">Phone Number:</label>
-        <input id="phone" type='text' placeholder="Add Phone Number" onChange={e => setPersonPhone(e.target.value)} name="phone" value={personPhone}/>
+        <input id="phone" type='text' placeholder="Add Phone Number" onChange={e => setPersonPhone(e.target.value)} name="phone" value={personPhone} autoComplete="off"/>
       </div>
     </form>
   )
