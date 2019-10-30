@@ -1,9 +1,11 @@
 .SuppliesForm_section {
   height: 100vh;
+  transform: translate(24%, 3%);
 }
 
 .SuppliesForm_section h2 {
   text-align: center;
+  padding-right: 390px;
 }
 
 .itemsList_section {
@@ -12,6 +14,13 @@
   padding: 0px 200px;
   margin-bottom: 10px;
   position: relative;
+
+   /* my additions */ 
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+   border: 1px solid white;
+   padding: 14px 11px;
+   width: 54%;
+   /* border-box */
 }
 
 .itemsList_quantity-container {
@@ -19,10 +28,21 @@
   flex-direction: column;
 }
 
+.item-name {
+  padding-left: 42px;
+  padding-top: 8px;
+}
+
 .quantity-text {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  padding-right: 169px;
+}
+
+.quantity-input {
+  width: 2px; 
+  margin-left: -6px;
 }
 
 .itemsList_quantity-container button {
@@ -33,9 +53,17 @@
 }
 
 .itemsList_save-changes {
-  height: 50px;
+  height: 37px;
   width: 100px;
   font-size: 12px;
   position: absolute;
-  right: 50px;
+  right: 34px;
+  align-items: center;
+  margin-top: 15px; 
+}
+
+.quantity-amount {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 7.25px;
 }
