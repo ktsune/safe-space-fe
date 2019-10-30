@@ -78,13 +78,13 @@ export const patchItem = async (item, reliefCenter) => {
 
 export const deleteItem = async (id) => {
   let options = {
-    method: 'DELETE',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     }
   }
 
-  let queryParams = `mutation {deleteItem(id: ${id}) {user {id}}}`
+  let queryParams = `mutation {deleteItem(id: ${id}) {item {id}}}`
 
   let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`
 

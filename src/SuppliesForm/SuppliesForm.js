@@ -92,11 +92,16 @@ const SuppliesForm = () => {
     setItemToAdd(e.target.value);
   };
 
-  const handleDeleteItem = (e, id) => {
+  const handleDeleteItem = async (e, id) => {
     e.preventDefault();
-    if (window.confirm(`Clicking this button removes the entire item from the ${reliefCenter} inventory. Would you like to proceed?`)){
+    console.log("1")
+    if (window.confirm(`Clicking this button removes the entire item from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
+      console.log("2")
+      await deleteItem(id);
+      console.log("3")
       let updatedItems = currentItems.filter(item => item.id !== id);
       setCurrentItems(updatedItems);
+      console.log("currentItems")
     }
   };
 
