@@ -19,9 +19,9 @@
 #new-item {
   font-size: 20px;
   padding-left: 5px;
-  width: 84%;
+  width: 40%;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
 }
 
 #item-name:hover {
@@ -35,9 +35,20 @@
   justify-content: center;
   align-items: center;
 }
-/* #dietary-item,
-#medications-item,
-#allergies-item,
-#other-item {
-  margin-left: 9%;
-} */
+
+#add-item-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#submit-new-item {
+  background-color: #6C782A;
+  width: 10%;
+  height: 50px;
+  /* border-radius: 5px; */
+}
+ #plus-img {
+   height: 30px;
+ }

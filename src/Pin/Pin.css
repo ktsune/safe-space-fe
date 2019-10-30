@@ -10,10 +10,28 @@
   opacity: 0.8;
   position: absolute;
   z-index: 99;  
-  width: 200px;
+  border:2px rounded #456879;
+	border-radius:10px;
+  height: 90px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  cursor: pointer; 
 }
 
-.pin-hover p,
-.pin-hover h3 {
+.relief-center-img {
+  width: 60px; 
+  height: 60px;  
+  margin-right: 10px;
+}
+
+.pin-hover p {
   color: white;
+}
+
+.pin-title {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
 }
