@@ -14,8 +14,6 @@ const SuppliesForm = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [isConsumable, setConsumable] = useState(false);
 
-  console.log(currentItems);
-
   const updateQuantity = (id, type) => {
     let updatedItems = currentItems.map(item => {
       if (item.id == id) {
@@ -94,14 +92,10 @@ const SuppliesForm = () => {
 
   const handleDeleteItem = async (e, item) => {
     e.preventDefault();
-    console.log("1")
     if (window.confirm(`Clicking this button removes all data associated with "${item.name}" from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
-      console.log("2")
       await deleteItem(item.id);
-      console.log("3")
       let updatedItems = currentItems.filter(items => items.id !== item.id);
       setCurrentItems(updatedItems);
-      console.log("currentItems")
     }
   };
 
