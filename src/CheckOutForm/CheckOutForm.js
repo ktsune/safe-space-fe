@@ -17,7 +17,7 @@ const CheckOutForm = () => {
   let namesList = namesArray.map((name, index) => {
     console.log(name)
     return <div className="CheckOutForm_visitor button push" id="push" key={index}>
-      <p>Check {name.name} Out </p>
+      <p>{name.name}</p>
       <button onClick={() => deleteUser(name.id)} id='delete-visitor'>X</button>
     </div>
   })
