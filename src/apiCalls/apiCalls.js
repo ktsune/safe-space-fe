@@ -25,8 +25,6 @@ export const getItems = async reliefCenter => {
 };
 
 export const addItem = async (item, centerId) => {
-  console.log(item)
-  console.log(centerId)
   let options = {
     method: "POST",
     headers: {
@@ -46,7 +44,6 @@ export const addItem = async (item, centerId) => {
     }
 
     let data = await resp.json();
-    console.log(data)
     return data.data.createItem.item.id
   } catch (error) {
     throw error;
@@ -54,7 +51,6 @@ export const addItem = async (item, centerId) => {
 };
 
 export const patchItem = async (item, reliefCenter) => {
-  console.log(item)
   let options = {
     method: "POST",
     headers: {
@@ -158,7 +154,6 @@ export const postNeeds = async (userId, needs) => {
 };
 
 export const deleteUserFromDB = async (id) => {
-  console.log(typeof parseInt(id))
   let options = {
     method: 'POST',
     headers: {
@@ -177,7 +172,7 @@ export const deleteUserFromDB = async (id) => {
       throw new Error('There was an error deleting the user')
     }
     let data = await resp.json();
-    return data
+    return data;
 
   } catch (error) {
     throw error

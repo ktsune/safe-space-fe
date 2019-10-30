@@ -22,7 +22,7 @@ describe('App', () => {
     expect(wrapper.length).toEqual(1)
   });
 
-  it('should match the snapshot with the data passed through', () => {
+  it.skip('should match the snapshot with the data passed through', () => {
     expect(wrapper).toMatchSnapshot();
   })
 });

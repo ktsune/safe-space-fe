@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import "./CheckInForm.css";
 
 const CheckInForm = ({ reliefCenter }) => {
-  console.log(reliefCenter)
   const { currentUsers, setCurrentUsers } = useContext(UsersContext)
   const [isUserSubmitted, setSubmittedStatus] = useState(false)
   const [personName, setPersonName] = useState("");
