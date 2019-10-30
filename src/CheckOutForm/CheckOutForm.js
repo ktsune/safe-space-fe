@@ -9,13 +9,13 @@ const CheckOutForm = () => {
 
   const deleteUser = async (id) => {
     await deleteUserFromDB(id);
-    let filteredUsers = currentUsers.original.filter(person => person.id != 3)
+    let filteredUsers = currentUsers.original.filter(person => person.id != id)
+    console.log(filteredUsers)
     setCurrentUsers({ result: filteredUsers, original: filteredUsers })
   }
 
   let namesArray = !search ? currentUsers.original : currentUsers.result 
   let namesList = namesArray.map((name, index) => {
-    console.log(name)
     return <div className="CheckOutForm_visitor button push" id="push" key={index}>
       <p>{name.name}</p>
       <button onClick={() => deleteUser(name.id)} id='delete-visitor'>X</button>
