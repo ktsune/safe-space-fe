@@ -82,11 +82,11 @@ const SuppliesForm = () => {
         
   const itemsList = currentItems.map((item, index) => {
     return <section key={index} className="itemsList_section">
-      <p>{item.name}</p>
+      <p className="item-name">{item.name}</p>
       <div className="itemsList_quantity-container">
         <div className="quantity-text">
           <button disabled={item.quantity === 0} onClick={() => updateQuantity(item.id, 'decrement')}>-</button>
-          <p>{item.quantity}</p>
+          <p className="quantity-amount">{item.quantity}</p>
           <button onClick={() => updateQuantity(item.id, 'increment')}>+</button>
         </div>
         <div>
