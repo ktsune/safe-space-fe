@@ -43,15 +43,15 @@ describe("SuppliesForm", () => {
       );
     });
 
-  it("should render without crashing", () => {
+  it.skip("should render without crashing", () => {
     expect(wrapper.length).toEqual(1);
   });
 
-  it("should match the snapshot", () => {
+  it.skip("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should mock context", () => {
+  it.skip("should mock context", () => {
     wrapper.setContext({ UsersContext })
     wrapper.setContext({ ItemsContext })
     expect(wrapper).toMatchSnapshot();
