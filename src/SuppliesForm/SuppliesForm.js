@@ -92,14 +92,14 @@ const SuppliesForm = () => {
     setItemToAdd(e.target.value);
   };
 
-  const handleDeleteItem = async (e, id) => {
+  const handleDeleteItem = async (e, item) => {
     e.preventDefault();
     console.log("1")
-    if (window.confirm(`Clicking this button removes all data associated with ${item.name} from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
+    if (window.confirm(`Clicking this button removes all data associated with "${item.name}" from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
       console.log("2")
-      await deleteItem(id);
+      await deleteItem(item.id);
       console.log("3")
-      let updatedItems = currentItems.filter(item => item.id !== id);
+      let updatedItems = currentItems.filter(items => items.id !== item.id);
       setCurrentItems(updatedItems);
       console.log("currentItems")
     }
@@ -152,7 +152,7 @@ const SuppliesForm = () => {
         </div>
         <button
           id="deleteItem-button"
-          onClick={e => handleDeleteItem(e, item.id)}
+          onClick={e => handleDeleteItem(e, item)}
         >
           <img
             id="deleteItem-img"
