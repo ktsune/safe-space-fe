@@ -76,6 +76,32 @@ export const patchItem = async (item, reliefCenter) => {
   }
 };
 
+export const deleteItem = async (id) => {
+  let options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  let queryParams = `mutation {deleteItem(id: ${id}) {user {id}}}`
+
+  let url = `https://safe-space-be.herokuapp.com/graphql?query=${queryParams}`
+
+  try {
+    let resp = await fetch(url, options);
+
+    if (!resp.ok) {
+      throw new Error('There was an error deleting the item.')
+    }
+    let data = await resp.json();
+    return data;
+
+  } catch (error) {
+    throw error
+  }
+}  
+
 export const postNewUser = async (personData, center) => { 
   let options = {
     method: "POST",
