@@ -1,16 +1,27 @@
 .CheckOutForm {
-  height: 100vh;
-  background-color: #9EA041;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
+  margin: auto;
+  height: 85vh;
+  border: 2px solid black;
+  background-color: black;
+  opacity: .7;
+  margin-top: 40px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  overflow-y: scroll;
 }
 
 .CheckOutForm_input {
-  width: 300px;
-  height: 30px;
-  font-size: 16px;
-  margin: 20px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 50%;
+  font-size: 20px;
+  padding-left: 5px;
 }
 
 .CheckOutForm_visitor {
@@ -22,8 +33,6 @@
   font-family: 'Aclonica';
   font-weight: bold;
   border-color: white; 
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  padding: 0px 20%;
 }
 
 #delete-visitor {
@@ -31,12 +40,14 @@
 }
 
 .CheckOutForm_visitor-container {
+  margin-top: 20px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   border: 1px solid white;
   padding: 20px;
   width: 90%;
 }
 
+/* 
 .button {
   color: white;
   text-align: center;
@@ -54,4 +65,4 @@
 
 #push:hover{
   animation: pulse 0.7s linear 1;
-}
+} */
