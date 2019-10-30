@@ -13,3 +13,23 @@
   font-weight: bold;
   overflow-y: scroll;
 }
+
+.CheckInForm-successful-checkin {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.CheckInForm-successful-checkin p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.button_successful-checkin {
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 100%;
+}

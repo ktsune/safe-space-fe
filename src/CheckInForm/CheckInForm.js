@@ -5,9 +5,11 @@ import EmergencyContactForm from "../EmergencyContactForm/EmergencyContactForm";
 import { postNewUser, postNeeds, postEmergencyContacts } from "../apiCalls/apiCalls";
 import { UsersContext } from '../Contexts/UsersContext';
 import "./CheckInForm.css";
+import { NavLink } from "react-router-dom";
 
 const CheckInForm = ({ reliefCenter }) => {
   const { currentUsers, setCurrentUsers } = useContext(UsersContext)
+  const [isUserSubmitted, setSubmittedStatus] = useState(false)
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [personPhone, setPersonPhone] = useState("");
@@ -47,9 +49,11 @@ const CheckInForm = ({ reliefCenter }) => {
     })
     await postNeeds(userId, neededItems)
     await postEmergencyContacts(userId, personData)
+    setSubmittedStatus(true)
   };
 
   return (
+    !isUserSubmitted ?
     <section className="CheckInForm">
       <BasicInfoForm
         personName={personName}
@@ -71,6 +75,14 @@ const CheckInForm = ({ reliefCenter }) => {
         setSendMessage={setSendMessage}
       />
         <button id="submit" onClick={submitUser}>Submit</button>
+    </section>
+    :
+    <section className="CheckInForm-successful-checkin">
+      <p>You successfully checked in!</p>
+      <button className="button_successful-checkin"onClick={() => setSubmittedStatus(false)}>Go to Check-In</button>
+      <NavLink to="/">
+        <button className="button_successful-checkin">Go to Main Menu</button>
+      </NavLink>
     </section>
   );
 };
