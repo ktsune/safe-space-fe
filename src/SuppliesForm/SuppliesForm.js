@@ -95,7 +95,7 @@ const SuppliesForm = () => {
   const handleDeleteItem = async (e, id) => {
     e.preventDefault();
     console.log("1")
-    if (window.confirm(`Clicking this button removes the entire item from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
+    if (window.confirm(`Clicking this button removes all data associated with ${item.name} from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
       console.log("2")
       await deleteItem(id);
       console.log("3")
