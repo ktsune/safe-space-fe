@@ -1,15 +1,15 @@
 .BasicInfoForm {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  display: inline-block;
 }
 
 #basic-info-header {
-  text-align: center;
   font-size: 30px;
+  width: 75%;
 }
 
 #fullname-container,
@@ -33,7 +33,7 @@
 }
 
 #fullname-label, #age-label, #phone-label {
-width: 35%;
+width: 45%;
 text-align: end;
 font-size: 20px;
 }
