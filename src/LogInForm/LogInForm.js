@@ -24,6 +24,17 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
         </article>
       ) : (
         <article className="navigation-menu button:hover button:active">
+
+          <button id="button-back" onClick={() => selectCenter(false)}>
+          <img
+              id="back-img"
+              alt="left arrow symbol"
+              src={require("../assets/left-arrow.svg")}
+            />
+            Back
+          </button>
+          <div id="nav-buttons-container">
+
           <NavLink
             to="/supplies"
             className="Link"
@@ -38,6 +49,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
           <NavLink to="/check-out" className="Link" id="check-out-button">
             <button id="check-out-button">Edit Visitors</button>
           </NavLink>
+          </div>
         </article>
       )}
     </section>
