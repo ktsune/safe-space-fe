@@ -23,12 +23,12 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
           <Map selectCenter={selectCenter} />
         </article>
       ) : (
-        <article className="navigation-menu">
+        <article className="navigation-menu button:hover button:active">
           <button
             className="LogInForm_button-back"
             onClick={() => selectCenter(false)}
           >
-            Back to Home
+            Back
           </button>
           <NavLink
             to="/supplies"
@@ -39,10 +39,10 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
             <button id="supplies-button">Supplies</button>
           </NavLink>
           <NavLink to="/check-in" className="Link" id="check-in-button">
-            <button id="check-in-button">Check-In Displaced Person</button>
+            <button id="check-in-button">New Visitor</button>
           </NavLink>
           <NavLink to="/check-out" className="Link" id="check-out-button">
-            <button id="check-out-button">Check-Out Displaced Person</button>
+            <button id="check-out-button">Edit Visitors</button>
           </NavLink>
         </article>
       )}
