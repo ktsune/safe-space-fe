@@ -64,7 +64,7 @@ and click on `New Pull Request`
 
 - Ann Cerveny
 - Jacob Ogren
-- Jake Miller
+- [Jake Miller](https://github.com/Jake0Miller)
 - Sarah Tatro
 
 ## Tech Stack List
