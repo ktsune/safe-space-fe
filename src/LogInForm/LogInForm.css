@@ -71,23 +71,24 @@ align-items: center;
 }
 
 #supplies-button #supplies-button { 
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    font-weight: bold;
-    color: #000;
-    background-color: #F8FFD5;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+  color: #782a30;
+  background-color: #F8FFD5;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #9999;
   }
 
 #supplies-button #supplies-button:hover {
   background-color: #782a30;
+  color: #F8FFD5;
 } 
 
 #supplies-button #supplies-button:active {
@@ -104,7 +105,7 @@ align-items: center;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #000;
+  color: #782a30;
   font-weight: bold;
   background-color: #F8FFD5;
   border: none;
@@ -114,6 +115,7 @@ align-items: center;
 
 #check-in-button #check-in-button:hover {
   background-color: #782a30;
+  color: #F8FFD5;
 } 
 
 #check-in-button #check-in-button:active {
@@ -131,7 +133,7 @@ transform: translateY(4px);
   text-decoration: none;
   outline: none;
   font-weight: bold;
-  color: #000;
+  color: #782a30;
   background-color: #F8FFD5;
   border: none;
   border-radius: 15px;
@@ -140,6 +142,8 @@ transform: translateY(4px);
 
 #check-out-button #check-out-button:hover {
   background-color: #782a30;
+  color: #F8FFD5;
+
 } 
 
 #check-out-button #check-out-button:active {
