@@ -32,13 +32,27 @@ https://github.com/ktsune/safe-space-fe/projects/1
 
 ## User Interface
 
-<a href="https://cl.ly/6cd898a4d513" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/3P0L090A1t3S1j1O1y1N/Screen%20Shot%202019-10-30%20at%203.37.00%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
+Log-In Page
 
-<a href="https://cl.ly/ed057425b142" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/2j3x113Q3I1l0C2u2Y01/Screen%20Shot%202019-10-30%20at%203.38.25%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
+![Screen Shot 2019-10-31 at 1 03 56 AM](https://user-images.githubusercontent.com/11339301/67926441-a63bd900-fb7b-11e9-81d4-218383e0c10b.png)
 
-<a href="https://cl.ly/575f13499fba" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/2P410r0q3I3o3v092Y21/Screen%20Shot%202019-10-30%20at%203.39.12%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
+Navigation Page
 
-<a href="https://cl.ly/cdfe81dc3197" target="_blank"><img src="https://dzwonsemrish7.cloudfront.net/items/0B0y0e1l3l232K3z370y/Screen%20Shot%202019-10-30%20at%203.39.55%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
+![Screen Shot 2019-10-31 at 1 03 56 AM](https://user-images.githubusercontent.com/11339301/67926478-bce23000-fb7b-11e9-8663-6a7d9e2126bf.png)
+
+Inventory Page
+
+![Screen Shot 2019-10-31 at 1 10 08 AM](https://user-images.githubusercontent.com/11339301/67926500-d1bec380-fb7b-11e9-885e-40019039bdc7.png)
+![Screen Shot 2019-10-31 at 1 10 00 AM](https://user-images.githubusercontent.com/11339301/67926515-d71c0e00-fb7b-11e9-83a7-7b814e4fd31b.png)
+
+Check-In Page
+
+![Screen Shot 2019-10-31 at 1 10 27 AM](https://user-images.githubusercontent.com/11339301/67926588-f4e97300-fb7b-11e9-8b96-65a8a187d347.png)
+![Screen Shot 2019-10-31 at 1 11 33 AM](https://user-images.githubusercontent.com/11339301/67926589-f4e97300-fb7b-11e9-88a7-3a1672c0715c.png)
+
+Check-Out Visitor Page
+
+![Screen Shot 2019-10-31 at 1 12 13 AM](https://user-images.githubusercontent.com/11339301/67926633-177b8c00-fb7c-11e9-8062-4188ee2e6e3b.png)
 
 ## Wireframe
 
