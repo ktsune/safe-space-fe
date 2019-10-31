@@ -187,7 +187,7 @@ const SuppliesForm = () => {
           />
         </label>
         <label id="consumable-label-container">
-          Is item consumable?
+          Is item consumable? 
           <img
             className="consumable-check"
             alt="add new item"

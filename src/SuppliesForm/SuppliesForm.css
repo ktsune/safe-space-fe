@@ -50,6 +50,16 @@
   margin-right: 25px;
 }
 
+.quantity-text button {
+  background-color: #565656;
+  color: white;
+  border-radius: 5px;
+}
+
+.quantity-text button:disabled {
+  opacity: 0.5;
+}
+
 .item-name {
   font-size: 20px;
   font-weight: bold;
