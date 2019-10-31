@@ -16,7 +16,7 @@ const CheckOutForm = () => {
   let namesArray = !search ? currentUsers.original : currentUsers.result 
   let namesList = namesArray.map((name, index) => {
     return <div className="CheckOutForm_visitor button push" id="push" key={index}>
-      <p>{name.name}</p>
+      <p id="person-name">{name.name}</p>
       <button onClick={() => deleteUser(name.id)} id='delete-visitor'>X</button>
     </div>
   })
@@ -33,6 +33,7 @@ const CheckOutForm = () => {
 
   return (
     <section className="CheckOutForm">
+      <h1 id="checkout-form-text">Check-Out Visitor</h1>
       <input 
         className="CheckOutForm_input"
         type="text"
