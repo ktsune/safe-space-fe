@@ -38,7 +38,7 @@ Log-In Page
 
 Navigation Page
 
-![Screen Shot 2019-10-31 at 1 03 56 AM](https://user-images.githubusercontent.com/11339301/67926478-bce23000-fb7b-11e9-8663-6a7d9e2126bf.png)
+![Screen Shot 2019-10-31 at 12 59 39 AM](https://user-images.githubusercontent.com/11339301/67926675-3843e180-fb7c-11e9-91e8-a225f16ed3a4.png)
 
 Inventory Page
 
