@@ -83,7 +83,7 @@ and click on `New Pull Request`
 ## Contributors
 
 - Ann Cerveny
-- Jacob Ogren
+- [Jacob Ogren](https://github.com/jogren/)
 - [Jake Miller](https://github.com/Jake0Miller)
 - Sarah Tatro
 
