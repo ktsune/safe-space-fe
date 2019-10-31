@@ -2,6 +2,7 @@
   height: 85vh;
   display: flex;
   justify-content: center;
+  background-color: #6C782A;
 }
 
 .pick-relief-center-menu {
@@ -19,12 +20,14 @@
 }
 
 .navigation-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
-  position: relative;
+}
+
+#nav-buttons-container {
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
 }
 
 .Link {
@@ -35,8 +38,9 @@
   height: 75px;
   width: 100%;
   border-radius: 15px;
-  background-color: #D5CF91;
-  font-size: 25px;
+  font-size: 40px;
+  margin: 50px 0px;
+
 }
 
 #supplies-button-link, #check-in-button-link, 
@@ -44,21 +48,26 @@
   width: 25%;
 }
 
-.LogInForm_button-back {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 50px;
-  width: 150px;
-  border-radius: 15px;
-  background-color: #D5CF91;
-  font-size: 16px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: -101px;
-  margin-right: 3px;
-  width: auto;
+#button-back {
+  background-color: #782a30;
+  border: 1px solid white;
+  width: 10%;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#back-img {
+  height: 35px;
+  margin-right: 15px;
 }
 
 #supplies-button #supplies-button { 
@@ -69,17 +78,20 @@
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background-color: #4CAF50;
+    font-weight: bold;
+    color: #000;
+    background-color: #F8FFD5;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
   }
 
-#supplies-button #supplies-button:hover {background-color: #3e8e41} 
+#supplies-button #supplies-button:hover {
+  background-color: #782a30;
+} 
 
 #supplies-button #supplies-button:active {
-  background-color: #3e8e41;
+  background-color: #F8FFD5;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 } 
@@ -92,17 +104,20 @@
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background-color: #4CAF50;
+  color: #000;
+  font-weight: bold;
+  background-color: #F8FFD5;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-#check-in-button #check-in-button:hover {background-color: #3e8e41} 
+#check-in-button #check-in-button:hover {
+  background-color: #782a30;
+} 
 
 #check-in-button #check-in-button:active {
-background-color: #3e8e41;
+background-color: #F8FFD5;
 box-shadow: 0 5px #666;
 transform: translateY(4px);
 } 
@@ -115,17 +130,20 @@ transform: translateY(4px);
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background-color: #4CAF50;
+  font-weight: bold;
+  color: #000;
+  background-color: #F8FFD5;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-#check-out-button #check-out-button:hover {background-color: #3e8e41} 
+#check-out-button #check-out-button:hover {
+  background-color: #782a30;
+} 
 
 #check-out-button #check-out-button:active {
-background-color: #3e8e41;
+background-color: #F8FFD5;
 box-shadow: 0 5px #666;
 transform: translateY(4px);
 } 
