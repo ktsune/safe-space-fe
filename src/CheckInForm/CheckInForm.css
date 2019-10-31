@@ -18,25 +18,38 @@
 .CheckInForm-successful-checkin {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   margin: auto;
   margin-top: 10%;
+  align-items: center;
 }
 
 .CheckInForm-successful-checkin p {
   color: white;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
 }
 
+.CheckInForm-successful-checkin_main-menu,
 .button_successful-checkin {
-  height: 30px;
+  height: 50px;
   margin-bottom: 10px;
-  font-size: 14px;
-  width: 100%;
+  font-size: 18px;
   border-radius: 5px;
   background-color: #782a30;
   color: white;
+}
+
+.CheckInForm-successful-checkin_NavLink {
+  width: 80%;
+}
+
+.CheckInForm-successful-checkin_main-menu {
+  width: 100%;
+}
+
+.button_successful-checkin {
+   width: 80%;
 }
 
 hr {
@@ -59,8 +72,7 @@ hr {
 }
 
 #submit-form-button {
-  margin-top: 15px;
-  margin-bottom: 50px;
+  margin: 15px 0px;
   width: 50%;
   height: 50px;
   font-size: 30px;
@@ -68,4 +80,10 @@ hr {
   border-radius: 5px;
   background-color: #782a30;
   color: white;
+  cursor: pointer;
+}
+
+#submit-form-button:disabled {
+  background: #ac9b9b;
+  color: #782a30;
 }

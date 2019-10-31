@@ -15,7 +15,7 @@ const EmergencyContactForm = ({
     e.preventDefault();
     setSendMessage(!sendMessage);
   };
-
+  console.log(sendMessage)
   return (
     <form className="EmergencyContactForm">
       <h1 id="emergency-contact-info-header">Emergency Contact Information:</h1>
@@ -30,6 +30,7 @@ const EmergencyContactForm = ({
           value={emergencyName}
           placeholder="Add Full Name"
           onChange={e => setEmergencyName(e.target.value)}
+          autoComplete="off"
         />
       </div>
       <div id="field">
@@ -43,6 +44,7 @@ const EmergencyContactForm = ({
           value={emergencyPhone}
           placeholder="Add Phone Number"
           onChange={e => setEmergencyPhone(e.target.value)}
+          autoComplete="off"
         />
       </div>
       <div id="field">
@@ -56,6 +58,7 @@ const EmergencyContactForm = ({
           value={emergencyRelationship}
           placeholder="Add Relationship"
           onChange={e => setEmergencyRelationship(e.target.value)}
+          autoComplete="off"
         />
       </div>
 
@@ -63,9 +66,12 @@ const EmergencyContactForm = ({
         <h3 id="public-or-private-button-text">
           By clicking the following button, I agree to allow a message to be sent to the emergency contact number listed above.
         </h3>
-        <button id="make-public-or-private-button" onClick={e => toggleSendMessage(e)}>
-          Send Text to Contact
-        </button>
+        <div>
+          <button id="make-public-or-private-button" onClick={e => toggleSendMessage(e)}>
+            Send Text to Contact
+          </button>
+          {sendMessage && <img src={require("../assets/check_mark_success.png")} alt="Send text message confirmation"/>}
+        </div>
       </div>
     </form>
   );

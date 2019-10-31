@@ -47,8 +47,13 @@
   background-color: #6C782A;
   width: 10%;
   height: 50px;
-  /* border-radius: 5px; */
+  cursor: pointer;
 }
+
+#submit-new-item:disabled {
+  background-color:#ac9b9b;
+}
+
  #plus-img {
    height: 30px;
  }
