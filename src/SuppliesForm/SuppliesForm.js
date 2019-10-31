@@ -92,7 +92,11 @@ const SuppliesForm = () => {
 
   const handleDeleteItem = async (e, item) => {
     e.preventDefault();
-    if (window.confirm(`Clicking this button removes all data associated with "${item.name}" from the ${reliefCenter.name} inventory. Would you like to proceed?`)){
+    if (
+      window.confirm(
+        `Clicking this button removes all data associated with "${item.name}" from the ${reliefCenter.name} inventory. Would you like to proceed?`
+      )
+    ) {
       await deleteItem(item.id);
       let updatedItems = currentItems.filter(items => items.id !== item.id);
       setCurrentItems(updatedItems);
@@ -134,20 +138,15 @@ const SuppliesForm = () => {
               +
             </button>
           </div>
-          <div id="add-quantity-input-container">
             <input
-              className="quantity_input"
+              id="quantity_input"
               type="number"
               name="quantityInput"
               placeholder="Enter a value..."
               onChange={e => handleQuantityInput(e, item)}
             />
-          </div>
         </div>
-        <button
-          id="deleteItem-button"
-          onClick={e => handleDeleteItem(e, item)}
-        >
+        <button id="deleteItem-button" onClick={e => handleDeleteItem(e, item)}>
           <img
             id="deleteItem-img"
             alt="circle with an x inside"
@@ -167,13 +166,14 @@ const SuppliesForm = () => {
   });
 
   return (
-    <section className="SuppliesForm_section">
-      <h2>Inventory for {reliefCenter.name}</h2>
+    <section className="SuppliesForm">
+      <h2 id="supplies-header-text">Inventory for {reliefCenter.name}</h2>
       {errorMsg && (
         <p>There was an error saving your changes, please try again.</p>
       )}
-      <article>{itemsList}</article>
-      <form className="SuppliesForm-add-item">
+      <article id="itemsList-container">{itemsList}</article>
+      <hr />
+      <form id="supplies-form-add-item">
         <label>
           Add an item:
           <input
