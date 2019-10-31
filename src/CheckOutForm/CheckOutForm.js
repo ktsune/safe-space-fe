@@ -17,7 +17,13 @@ const CheckOutForm = () => {
   let namesList = namesArray.map((name, index) => {
     return <div className="CheckOutForm_visitor button push" id="push" key={index}>
       <p id="person-name">{name.name}</p>
-      <button onClick={() => deleteUser(name.id)} id='delete-visitor'>X</button>
+      <button id="delete-visitor-button" onClick={() => deleteUser(name.id)}>
+          <img
+            id="delete-visitor-button-img"
+            alt="circle with an x inside"
+            src={require("../assets/delete-button.svg")}
+          />
+        </button>
     </div>
   })
   

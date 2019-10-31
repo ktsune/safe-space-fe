@@ -35,18 +35,13 @@
   display: flex;
   border: 1px solid white;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 10px 0px 10px 0px;
   justify-content: center;
-  align-items: center;
   width: 75%;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  font-family: 'Aclonica';
-  font-weight: bold;
-  border-color: white;  */
+}
+
+.CheckOutForm_visitor:hover {
+  background-color: #565656;
 }
 
 #delete-visitor {
@@ -59,28 +54,23 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  /* border: 1px solid white; */
-  padding: 20px;
   width: 90%;
 }
 
-/* 
-.button {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0.6;
-  transition: 0.3s;
-  text-decoration: none;
+#delete-visitor-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.button:hover {opacity: 4}
-
-.push {
-  margin:0.4em; 
+#delete-visitor-button-img {
+  height: 25px;
 }
 
-#push:hover{
-  animation: pulse 0.7s linear 1;
-} */
+#delete-visitor-button-img:hover {
+  background-color:#782a30;
+  border-radius: 100%;
+}
+
+
+
