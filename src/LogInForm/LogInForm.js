@@ -24,12 +24,6 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
         </article>
       ) : (
         <article className="navigation-menu button:hover button:active">
-          <button
-            className="LogInForm_button-back"
-            onClick={() => selectCenter(false)}
-          >
-            Back
-          </button>
           <NavLink
             to="/supplies"
             className="Link"
