@@ -63,7 +63,7 @@ and click on `New Pull Request`
 ## Contributors
 
 - Ann Cerveny
-- Jacob Bogart
+- Jacob Ogren
 - Jake Miller
 - Sarah Tatro
 
