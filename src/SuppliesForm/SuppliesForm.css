@@ -1,26 +1,46 @@
-.SuppliesForm_section {
-  height: 100vh;
+.SuppliesForm {
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 50%;
+  margin: auto;
+  height: 80vh;
+  border: 2px solid black;
+  background-color: black;
+  opacity: .7;
+  margin-top: 40px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  overflow-y: scroll;
+  /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
-.SuppliesForm_section h2 {
-  color: white;
+#supplies-header-text {
   font-size: 30px;
+  text-align: center;
+}
+
+#itemsList_container {
+  overflow: scroll;
+  width: 80%;
+  height: 55vh;
+  margin-bottom: 20px;
 }
 
 .itemsList_section {
   display: flex;
-  width: 50%;
+  width: 75%;
   margin: auto;
-  justify-content: center;
   align-items: center;
   margin-bottom: 10px;
   position: relative;
-   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-   border: 1px solid white;
-   padding: 14px 11px;
+  border: 1px solid white;
+  padding: 14px 11px;
+  border-radius: 10px;
 }
 
 .itemsList_quantity-container {
@@ -30,10 +50,18 @@
   margin-right: 25px;
 }
 
-.item-name {
-  padding-top: 8px;
+.quantity-text button {
+  background-color: #565656;
   color: white;
-  font-size: 18px;
+  border-radius: 5px;
+}
+
+.quantity-text button:disabled {
+  opacity: 0.5;
+}
+
+.item-name {
+  font-size: 20px;
   font-weight: bold;
   width: 50%;
 }
@@ -41,12 +69,13 @@
 .quantity-text {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-#add-quantity-input-container {
-  display: flex;
-  justify-content: center;
+#quantity_input {
+  height: 25px;
 }
+
 
 .itemsList_quantity-container button {
   height: 30px;
@@ -56,55 +85,47 @@
 }
 
 .itemsList_save-changes {
-  height: 37px;
+  height: 35px;
+  border-radius: 5px;
   width: 100px;
   font-size: 12px;
   position: absolute;
   right: 34px;
+  background-color: #782a30;
+  color: white;
+  font-weight: bold;
 }
 
-.quantity-amount {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 7.25px;
-  right: 50px;
-}
-
-.SuppliesForm-add-item {
+#supplies-form-add-item {
+  margin: 25px auto;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  font-size: 25px;
+}
+
+#supplies-form-add-item-input {
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 5px;
+  margin-left: 15px;
+}
+
+#consumable-label-container {
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .consumable-check {
   height: 20px;
+  margin: 0px 10px 0px 20px;
 }
 
-.SuppliesForm_section article {
-  overflow: scroll;
-  width: 80%;
-  height: 55vh;
-  margin-bottom: 20px;
-}
-
-.SuppliesForm-add-item label {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.SuppliesForm-add-item label input {
-  height: 25px;
-  width: 60%;
-  font-size: 14px;
-}
-.SuppliesForm-add-item button {
-  height: 30px;
-  width: 200px;
-  font-size: 14px;
-  margin: auto;
-}
 #deleteItem-button {
   background: transparent;
   border: none;
@@ -115,4 +136,21 @@
 
 #deleteItem-img {
   height: 25px;
+}
+
+#deleteItem-img:hover {
+  background-color:#782a30;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#add-item-button {
+  width: 50%;
+  height: 35px;
+  font-size: 25px;
+  align-self: center;
+  border-radius: 5px;
+  background-color: #782a30;
+  color: white;
+  cursor: pointer;
 }
