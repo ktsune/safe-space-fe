@@ -24,6 +24,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
         </article>
       ) : (
         <article className="navigation-menu button:hover button:active">
+
           <button id="button-back" onClick={() => selectCenter(false)}>
           <img
               id="back-img"
@@ -33,6 +34,7 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
             Back
           </button>
           <div id="nav-buttons-container">
+
           <NavLink
             to="/supplies"
             className="Link"
