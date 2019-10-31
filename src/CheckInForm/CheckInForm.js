@@ -53,6 +53,18 @@ const CheckInForm = ({ reliefCenter }) => {
     setSubmittedStatus(true)
   };
 
+  const returnToCheckIn = () => {
+    setPersonName("")
+    setPersonAge("")
+    setPersonPhone("")
+    setNeededItems([])
+    setEmergencyName("")
+    setEmergencyPhone("")
+    setEmergencyRelationship("")
+    setSendMessage(false)
+    setSubmittedStatus(false)
+  }
+
   return (
     !isUserSubmitted ?
     <section className="CheckInForm">
@@ -87,17 +99,16 @@ const CheckInForm = ({ reliefCenter }) => {
           information in this form is true and correct to the best of my
           knowledge.
         </h3>
-        <button id="submit-form-button" onClick={submitUser}>
-          Submit Form
-        </button>
+        <button disabled={!personName || !personAge}id="submit-form-button" onClick={submitUser}>Submit Form</button>
+        {(!personName || !personAge) && <p><span className="required-asterisk">* Required Field</span></p>}
       </div>
     </section>
     :
     <section className="CheckInForm-successful-checkin">
       <p>You successfully checked in!</p>
-      <button className="button_successful-checkin"onClick={() => setSubmittedStatus(false)}>Go to Check-In</button>
-      <NavLink to="/">
-        <button className="button_successful-checkin">Go to Main Menu</button>
+      <button className="button_successful-checkin"onClick={returnToCheckIn}>Go to Check-In</button>
+        <NavLink to="/" className="CheckInForm-successful-checkin_NavLink">
+          <button className="CheckInForm-successful-checkin_main-menu">Go to Main Menu</button>
       </NavLink>
     </section>
   );

@@ -15,7 +15,7 @@
 #fullname-container,
 #age-container,
 #phone-container {
-  width: 50%;
+  width: 65%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -33,8 +33,12 @@
 }
 
 #fullname-label, #age-label, #phone-label {
-width: 45%;
+width: 50%;
 text-align: end;
 font-size: 20px;
+}
+
+.required-asterisk {
+  color: red;
 }
 

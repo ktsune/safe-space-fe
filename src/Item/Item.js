@@ -33,8 +33,9 @@ const Item = ({ item, items, setItems, neededItems, setNeededItems }) => {
             name="name"
             value={newItem}
             onChange={handleChange}
+            autoComplete="off"
           />
-          <button id="submit-new-item" type="submit" onClick={e => handleSubmit(e, newItem)}>
+          <button disabled={!newItem} id="submit-new-item" type="submit" onClick={e => handleSubmit(e, newItem)}>
             <img
               id="plus-img"
               alt="plus symbol"
