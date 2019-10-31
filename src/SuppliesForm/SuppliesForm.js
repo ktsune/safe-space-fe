@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { patchItem, addItem, deleteItem } from "../apiCalls/apiCalls";
 import { CurrentCenterContext } from "../Contexts/CurrentCenterContext";
 import { ItemsContext } from "../Contexts/ItemsContext";
-import PropTypes from "prop-types";
 import "./SuppliesForm.css";
 
 const SuppliesForm = () => {
@@ -209,10 +208,3 @@ const SuppliesForm = () => {
 };
 
 export default SuppliesForm;
-
-SuppliesForm.contextTypes = {
-  reliefCenter: PropTypes.object,
-  setreliefCenter: PropTypes.func,
-  currentItems: PropTypes.arrayOf(PropTypes.object),
-  setCurrentItems: PropTypes.func
-};
