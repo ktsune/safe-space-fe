@@ -18,15 +18,15 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
       {!isCenterSelected ? (
         <article className="pick-relief-center-menu">
           <h2 id="login-form-instructions">
-            Please select the location of the relief center for which you are currently stationed.
+            Please select the location of the relief center for which you are
+            currently stationed.
           </h2>
           <Map selectCenter={selectCenter} />
         </article>
       ) : (
         <article className="navigation-menu button:hover button:active">
-
           <button id="button-back" onClick={() => selectCenter(false)}>
-          <img
+            <img
               id="back-img"
               alt="left arrow symbol"
               src={require("../assets/left-arrow.svg")}
@@ -34,21 +34,20 @@ const LogInForm = ({ reliefCenter, selectCenter, isCenterSelected }) => {
             Back
           </button>
           <div id="nav-buttons-container">
-
-          <NavLink
-            to="/supplies"
-            className="Link"
-            id="supplies-button"
-            onClick={fetchItems}
-          >
-            <button id="supplies-button">Supplies</button>
-          </NavLink>
-          <NavLink to="/check-in" className="Link" id="check-in-button">
-            <button id="check-in-button">New Visitor</button>
-          </NavLink>
-          <NavLink to="/check-out" className="Link" id="check-out-button">
-            <button id="check-out-button">Edit Visitors</button>
-          </NavLink>
+            <NavLink
+              to="/supplies"
+              className="Link"
+              id="supplies-button"
+              onClick={fetchItems}
+            >
+              <button id="supplies-button">Supplies</button>
+            </NavLink>
+            <NavLink to="/check-in" className="Link" id="check-in-button">
+              <button id="check-in-button">New Visitor</button>
+            </NavLink>
+            <NavLink to="/check-out" className="Link" id="check-out-button">
+              <button id="check-out-button">Edit Visitors</button>
+            </NavLink>
           </div>
         </article>
       )}
