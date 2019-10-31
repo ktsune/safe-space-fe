@@ -22,7 +22,7 @@ https://github.com/ktsune/safe-space-fe/projects/1
 
 #### How to setup:
     Clone the repo:
-    $ git clone git@github.com:ktsune/express_sweater_weather.git
+    $ git clone git@github.com:ktsune/safe-space-fe.git
 
     Install npm:
     $ npm install
