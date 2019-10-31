@@ -174,9 +174,10 @@ const SuppliesForm = () => {
       <article id="itemsList-container">{itemsList}</article>
       <hr />
       <form id="supplies-form-add-item">
-        <label>
-          Add an item:
+        <label id="supplies-form-add-item-label">
+          Add Item:
           <input
+            id="supplies-form-add-item-input"
             type="text"
             name="addItem"
             placeholder="Enter item name..."
@@ -185,8 +186,8 @@ const SuppliesForm = () => {
             autoComplete="off"
           />
         </label>
-        <label>
-          Is the item consumable:
+        <label id="consumable-label-container">
+          Is item consumable?
           <img
             className="consumable-check"
             alt="add new item"
@@ -197,8 +198,9 @@ const SuppliesForm = () => {
             }
             onClick={handleConsumable}
           />
+          {!isConsumable ? <p>No</p> : <p>Yes</p>}
         </label>
-        <button disabled={!itemToAdd} onClick={submitNewItem}>
+        <button id="add-item-button" disabled={!itemToAdd} onClick={submitNewItem}>
           Add Item
         </button>
       </form>

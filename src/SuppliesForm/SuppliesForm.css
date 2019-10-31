@@ -25,7 +25,10 @@
 }
 
 #itemsList_container {
-  width: 90%;
+  overflow: scroll;
+  width: 80%;
+  height: 55vh;
+  margin-bottom: 20px;
 }
 
 .itemsList_section {
@@ -80,40 +83,35 @@
 }
 
 #supplies-form-add-item {
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  font-size: 25px;
+}
+
+#supplies-form-add-item-input {
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 5px;
+  margin-left: 15px;
+}
+
+#consumable-label-container {
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .consumable-check {
   height: 20px;
+  margin: 0px 10px 0px 20px;
 }
 
-.SuppliesForm_section article {
-  overflow: scroll;
-  width: 80%;
-  height: 55vh;
-  margin-bottom: 20px;
-}
-
-.SuppliesForm-add-item label {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.SuppliesForm-add-item label input {
-  height: 25px;
-  width: 60%;
-  font-size: 14px;
-}
-.SuppliesForm-add-item button {
-  height: 30px;
-  width: 200px;
-  font-size: 14px;
-  margin: auto;
-}
 #deleteItem-button {
   background: transparent;
   border: none;
@@ -129,5 +127,16 @@
 #deleteItem-img:hover {
   background-color:#782a30;
   border-radius: 100%;
+  cursor: pointer;
+}
+
+#add-item-button {
+  width: 50%;
+  height: 35px;
+  font-size: 25px;
+  align-self: center;
+  border-radius: 5px;
+  background-color: #782a30;
+  color: white;
   cursor: pointer;
 }
